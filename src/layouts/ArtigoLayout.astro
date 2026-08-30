@@ -13,7 +13,11 @@ interface Props {
 const { titulo, categoria, tempo_leitura, autor, data, imagem_capa } = Astro.props;
 
 const dataFormatada = data
-  ? new Date(data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
+  ? new Date(`${data}T00:00:00`).toLocaleDateString('pt-BR', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+    })
   : null;
 ---
 

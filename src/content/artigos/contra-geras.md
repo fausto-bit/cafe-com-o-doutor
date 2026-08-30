@@ -3,7 +3,7 @@ titulo: "Contra Geras: por que envelhecer bem é mais do que tratar doenças"
 categoria: "Longevidade"
 tempo_leitura: "12 min"
 autor: "Dr. Fausto Azambuja"
-data: "" # definir na publicação
+data: "2026-08-30"
 imagem_capa: "/img/img-geras-ampulheta.png"
 ---
 

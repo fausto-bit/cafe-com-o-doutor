@@ -3,7 +3,7 @@ titulo: "Comer com quem se ama: um guia prático para a hora da refeição na de
 categoria: "Família"
 tempo_leitura: "10 min"
 autor: "Dr. Fausto Azambuja"
-data: "" # definir na publicação
+data: "2026-08-30"
 imagem_capa: "/img/img-mesa-posta.png"
 fonte: "Baseado em diretrizes da American Geriatrics Society (AGS) e da ESPEN"
 ---

@@ -3,7 +3,7 @@ titulo: "Enquanto você dorme, o cérebro faz a faxina"
 categoria: "Cérebro"
 tempo_leitura: "8 min"
 autor: "Dr. Fausto Azambuja"
-data: "" # definir na publicação
+data: "2026-08-30"
 imagem_capa: "/img/img-cabeca-fluxo.png"
 fonte: "Nedergaard (2013), Xie et al. (2013), Tarasoff-Conway et al. (2015), Lee et al. (2015), Ju et al. (2017)"
 ---
