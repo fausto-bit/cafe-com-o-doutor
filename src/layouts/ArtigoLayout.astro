@@ -3,14 +3,16 @@ import BaseLayout from './BaseLayout.astro';
 
 interface Props {
   titulo: string;
+  subtitulo?: string;
   categoria: string;
   tempo_leitura: string;
   autor: string;
   data?: string;
-  imagem_capa: string;
+  imagem_capa?: string;
+  resumo?: string;
 }
 
-const { titulo, categoria, tempo_leitura, autor, data, imagem_capa } = Astro.props;
+const { titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo } = Astro.props;
 
 const dataFormatada = data
   ? new Date(`${data}T00:00:00`).toLocaleDateString('pt-BR', {
@@ -21,11 +23,16 @@ const dataFormatada = data
   : null;
 ---
 
-<BaseLayout title={`${titulo} — Café com o Doutor`} ogImage={imagem_capa}>
+<BaseLayout
+  title={`${titulo} — Café com o Doutor`}
+  description={resumo}
+  ogImage={imagem_capa || undefined}
+>
   <article class="wrap artigo">
     <header class="artigo-header">
       <span class="tag">{categoria}</span>
       <h1 class="font-display">{titulo}</h1>
+      {subtitulo && <p class="subtitulo">{subtitulo}</p>}
       <p class="meta">
         {autor} · {tempo_leitura} de leitura{dataFormatada ? ` · ${dataFormatada}` : ''}
       </p>
@@ -56,6 +63,13 @@ const dataFormatada = data
     font-style: italic;
     font-weight: 600;
     margin: 16px 0 12px;
+  }
+  .subtitulo {
+    font-family: 'Karla', sans-serif;
+    color: var(--clay);
+    font-size: 1.05rem;
+    max-width: 46ch;
+    margin: 0 auto 14px;
   }
   .meta {
     color: var(--clay);

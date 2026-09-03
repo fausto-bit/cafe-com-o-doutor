@@ -50,12 +50,14 @@ Cada artigo em Markdown usa este frontmatter:
 ```yaml
 ---
 titulo: string
-categoria: string        # ex.: "Longevidade", "Família", "Cérebro" — usado como tag/pílula
+subtitulo: string        # opcional — usado no artigo 4, um subtítulo técnico abaixo do título
+categoria: string        # ex.: "Longevidade", "Família", "Cérebro", "Prática Clínica" — usado como tag/pílula, não é enum fechado
 tempo_leitura: string    # ex.: "12 min"
 autor: string            # sempre "Dr. Fausto Azambuja"
 data: string             # data de publicação — definir na hora de publicar cada um
-imagem_capa: string      # caminho da imagem de capa, ex.: "/img/img-geras-ampulheta.png"
+imagem_capa: string      # caminho da imagem de capa, ex.: "/img/img-geras-ampulheta.png" — pode ficar vazio se ainda não gerada
 fonte: string            # opcional — referências/bibliografia, quando houver
+resumo: string           # opcional — usado no artigo 4, descrição de 1-2 linhas para SEO/compartilhamento
 ---
 ```
 
@@ -113,8 +115,13 @@ Três artigos já escritos, revisados e aprovados, com imagens já geradas e apr
 1. **Contra Geras: por que envelhecer bem é mais do que tratar doenças** (`contra-geras.md`) — categoria Longevidade, 12 min. Ensaio reflexivo sobre o Congresso Mineiro de Geriatria, a etimologia de "Geras" na mitologia grega, e a ideia de "Presbiatria".
 2. **Comer com quem se ama: um guia prático para a hora da refeição na demência** (`alimentacao-demencia.md`) — categoria Família, 10 min. Guia prático para cuidadores, adaptado de um documento técnico (ESPEN/AGS) para linguagem cotidiana. Contém 2 caixas de alerta de segurança (engasgo, textura de alimentos) que devem manter destaque visual.
 3. **Enquanto você dorme, o cérebro faz a faxina** (`faxina-noturna-cerebro.md`) — categoria Cérebro, 8 min. Ensaio sobre o sistema glinfático e sono profundo, com dicas práticas de higiene do sono.
+4. **O músculo por trás da fragilidade** (`musculo-por-tras-da-fragilidade.md`) — categoria **Prática Clínica** (nova, primeira vez usada), 14 min. Texto técnico voltado a colegas médicos/profissionais de saúde, com aviso ao leitor logo no início avisando o público-alvo. Compara a Escala de Fried e o IVCF-20, propondo o músculo como principal integrador da fragilidade multidimensional. Imagem de capa pronta: `img-musculo-convergencia.jpg` (figura humana com linhas convergindo para um ponto central em coral — a ideia de "via final comum").
 
-Todas as imagens referenciadas nesses arquivos já estão em `public/img/`.
+Todas as imagens referenciadas nos 4 artigos já estão em `public/img/`.
+
+## Material de Instagram (fora do site Astro)
+
+Em `instagram/carrossel-musculo-fragilidade/`: roteiro completo (9 telas, legendas, hashtags, variações de gancho) do carrossel que promove o artigo "O músculo por trás da fragilidade". **As imagens não foram incluídas de propósito** — uma tentativa anterior gerou imagens fora do sistema de design do site (fotos realistas, paleta azul/amarela genérica, ícones de clip-art, dimensões inconsistentes) e foram descartadas. Ver `PENDENTE-IMAGENS.md` na mesma pasta antes de gerar as imagens de verdade — elas precisam seguir o mesmo padrão line art/creme/coral usado nas ilustrações dos artigos do blog, não o texto do roteiro original.
 
 ## O que evitar
 

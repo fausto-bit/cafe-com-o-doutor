@@ -16,11 +16,13 @@ const { Content } = await render(artigo);
 
 <ArtigoLayout
   titulo={artigo.data.titulo}
+  subtitulo={artigo.data.subtitulo}
   categoria={artigo.data.categoria}
   tempo_leitura={artigo.data.tempo_leitura}
   autor={artigo.data.autor}
   data={artigo.data.data}
   imagem_capa={artigo.data.imagem_capa}
+  resumo={artigo.data.resumo}
 >
   <Content />
 </ArtigoLayout>
