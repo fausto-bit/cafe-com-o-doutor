@@ -1,5 +1,5 @@
 ---
-titulo: "A Caixa de Sapato dos Remédios: um Guia Prático para Organizar a Medicação em Casa"
+titulo: "A Caixa dos Remédios: um Guia Prático para Organizar a Medicação em Casa"
 categoria: "Família"
 tempo_leitura: "11 min"
 autor: "Dr. Fausto Azambuja"
