@@ -3,12 +3,14 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  showTelegram?: boolean;
 }
 
 const {
   title,
   description = 'Um blog de bolso sobre envelhecer bem, escrito pelo Dr. Fausto Azambuja.',
   ogImage = '/img/logo.jpg',
+  showTelegram = false,
 } = Astro.props;
 ---
 
@@ -63,6 +65,14 @@ const {
           Assinar no Substack
         </a>
       </div>
+      {showTelegram && (
+        <div class="wrap telegram-cta-wrap">
+          <a class="btn btn-pill btn-coral telegram-cta" href="https://t.me/faustodr" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+            Prefere Telegram a e-mail? Os ensaios também chegam lá, com espaço pra comentar.
+          </a>
+        </div>
+      )}
     </section>
 
     <footer class="site-footer">
@@ -293,6 +303,18 @@ const {
   .substack-inner p {
     color: var(--clay);
     margin: 0;
+  }
+  .telegram-cta-wrap {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .telegram-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .telegram-cta svg {
+    flex-shrink: 0;
   }
 
   /* Footer */
