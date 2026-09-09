@@ -7,10 +7,6 @@ autor: "Dr. Fausto Azambuja"
 data: "2026-09-03"
 imagem_capa: "/img/img-musculo-convergencia.jpg"
 resumo: "Uma reavaliação do debate entre a Escala de Fragilidade de Fried e o IVCF-20, propondo que o componente físico-muscular não substitui a multidimensionalidade da fragilidade — mas pode ser o seu principal integrador."
-resumo_whatsapp: |
-  🩺 *Fried ou IVCF-20? A pergunta certa não é qual escala vence — é quanto da fragilidade multidimensional passa pelo músculo.*
-
-  Ensaio técnico para colegas de geriatria comparando o fenótipo de Fried e o IVCF-20, revisando a evidência que liga sarcopenia a desfechos cognitivos, funcionais e de mortalidade, e propondo o músculo como principal — mas não único — integrador biológico da vulnerabilidade clínico-funcional. Artigo completo:
 ---
 
 > **Aviso ao leitor:** este texto foi escrito principalmente para colegas médicos e outros profissionais de saúde que trabalham com avaliação geriátrica — pressupõe alguma familiaridade com escalas de fragilidade, fisiologia muscular e o vocabulário clínico da geriatria. Se você não é da área e chegou até aqui, é bem-vindo a continuar: só avise que alguns trechos vão exigir uma busca rápida de termos pelo caminho.
