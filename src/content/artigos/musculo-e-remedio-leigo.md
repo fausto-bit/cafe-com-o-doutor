@@ -7,6 +7,10 @@ autor: "Dr. Fausto Azambuja"
 data: "2026-09-03"
 imagem_capa: "/img/capa-levantar-da-cadeira.jpg"
 resumo: "Quatro hábitos com evidência real para manter (ou recuperar) força, equilíbrio e independência — explicados sem jargão médico."
+resumo_whatsapp: |
+  💪 *Um estudo treinou idosos de 87 anos por dez semanas — e a força das pernas quase dobrou. Perder músculo não é destino.*
+
+  Quatro autotestes simples para saber onde você está, e quatro hábitos com evidência real para prevenir (ou reverter) a perda de força depois dos 60: treino de força, caminhada em ritmo de conversa, exercícios de equilíbrio e proteína em cada refeição. Artigo completo:
 ---
 
 Existe um estudo, hoje clássico, que treinou idosos de um asilo — média de 87 anos, alguns com mais de 90 — com treino de força por dez semanas. Resultado: a força das pernas quase dobrou. Gente que entrou usando andador saiu andando sozinha.

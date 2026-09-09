@@ -5,6 +5,10 @@ tempo_leitura: "11 min"
 autor: "Dr. Fausto Azambuja"
 data: "2026-09-05"
 imagem_capa: "/img/01-capa-caixa-sapato.jpg"
+resumo_whatsapp: |
+  💊 *Uma das causas mais comuns de internação de idosos não é uma doença nova — é o próprio tratamento.*
+
+  Por que o idoso é mais vulnerável a efeitos colaterais, o que é a "cascata terapêutica" (quando um remédio novo trata um efeito colateral do remédio anterior), por que a caixa de sapato com remédios misturados é um risco, e um checklist prático para organizar a medicação em casa com segurança. Artigo completo:
 ---
 
 Você já parou para pensar que uma das causas mais comuns de internação de idosos não é uma doença nova — é o próprio tratamento?

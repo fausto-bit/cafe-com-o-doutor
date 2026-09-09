@@ -5,6 +5,10 @@ tempo_leitura: "12 min"
 autor: "Dr. Fausto Azambuja"
 data: "2026-08-30"
 imagem_capa: "/img/img-geras-ampulheta.png"
+resumo_whatsapp: |
+  🧓 *Envelhecer bem não é só não estar doente — é resistir à fragilização com força, autonomia e propósito.*
+
+  Inspirado no Congresso Mineiro de Geriatria e na mitologia grega (Geras, deus da velhice), o texto defende que cuidar bem do idoso vai além de tratar doenças e aplicar escalas: exige raciocínio clínico, atenção à polifarmácia e, principalmente, cuidar do músculo — um dos maiores patrimônios da velhice. Não podemos vencer Geras para sempre, mas podemos chegar até ele mais tarde, e mais fortes. Artigo completo:
 ---
 
 Ontem participei do Congresso Mineiro de Geriatria e assisti a uma palestra de um antigo professor. Foi uma daquelas palestras que continuam na cabeça mesmo depois que terminam.

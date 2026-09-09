@@ -6,6 +6,10 @@ autor: "Dr. Fausto Azambuja"
 data: "2026-08-30"
 imagem_capa: "/img/img-cabeca-fluxo.png"
 fonte: "Nedergaard (2013), Xie et al. (2013), Tarasoff-Conway et al. (2015), Lee et al. (2015), Ju et al. (2017)"
+resumo_whatsapp: |
+  🧠 *O cérebro não descansa à noite — ele muda de trabalho: liga um sistema de limpeza que só funciona de verdade no sono profundo.*
+
+  O sistema glinfático, descoberto em 2012, varre do cérebro os resíduos do dia — incluindo as proteínas beta-amiloide e tau ligadas ao Alzheimer — mas só funciona bem durante o sono profundo. Remédio para dormir não substitui essa fase; hábitos como horário fixo, quarto fresco, menos tela à noite e exercício ajudam de verdade. Artigo completo:
 ---
 
 Imagine que, toda noite, enquanto você desliga a mente para descansar, o seu cérebro chama uma equipe de limpeza urbana para o turno da madrugada. Não é força de expressão — é, literalmente, o que a ciência descobriu que acontece.

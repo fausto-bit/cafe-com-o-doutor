@@ -5,6 +5,10 @@ tempo_leitura: "12 min"
 autor: "Dr. Fausto Azambuja"
 data: "2026-09-07"
 imagem_capa: "/img/01-capa-casa-memorias.png"
+resumo_whatsapp: |
+  🏡 *Institucionalizar não é sempre abandono — às vezes é o único jeito de voltar a ser filho, e não só cuidador.*
+
+  Como saber quando a casa deixou de ser segura: a "regra dos três" nas atividades básicas de vida diária, o peso jurídico de virar empregador de cuidadores em casa, e por que uma ILPI regulada pode oferecer uma rede de segurança que nenhuma família monta sozinha. Artigo completo:
 ---
 
 A casa de um idoso é tecida por fios invisíveis de memória. É o cheiro do café na cozinha, a poltrona gasta onde décadas de histórias foram lidas, o silêncio familiar dos cômodos. Para muitas famílias, manter o idoso nesse ambiente é uma promessa de honra.
