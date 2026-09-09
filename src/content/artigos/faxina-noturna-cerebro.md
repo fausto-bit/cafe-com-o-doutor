@@ -7,9 +7,15 @@ data: "2026-08-30"
 imagem_capa: "/img/img-cabeca-fluxo.png"
 fonte: "Nedergaard (2013), Xie et al. (2013), Tarasoff-Conway et al. (2015), Lee et al. (2015), Ju et al. (2017)"
 resumo_whatsapp: |
-  🧠 *O cérebro não descansa à noite — ele muda de trabalho: liga um sistema de limpeza que só funciona de verdade no sono profundo.*
+  📋 *Para levar com você*
 
-  O sistema glinfático, descoberto em 2012, varre do cérebro os resíduos do dia — incluindo as proteínas beta-amiloide e tau ligadas ao Alzheimer — mas só funciona bem durante o sono profundo. Remédio para dormir não substitui essa fase; hábitos como horário fixo, quarto fresco, menos tela à noite e exercício ajudam de verdade. Artigo completo:
+  - É no sono profundo (não em qualquer sono) que o cérebro limpa as proteínas ligadas ao Alzheimer — remédio para dormir (benzodiazepínico, "Z-drug") não garante esse tipo de sono.
+  - Horário fixo para dormir e acordar, todos os dias, ajuda mais do que parece.
+  - Evite cafeína depois das 14h (a meia-vida é de 5 a 7 horas) e álcool à noite — ele fragmenta o sono profundo, mesmo dando a sensação de sono.
+  - Quarto mais fresco (18-21°C) e tela desligada 1-2h antes de deitar favorecem a entrada no sono profundo.
+  - Dormir de lado parece favorecer esse sistema de limpeza, segundo estudos em modelos animais.
+
+  No artigo completo eu explico o que é o sistema glinfático — a "equipe de limpeza" que só liga à noite, descoberta em 2012:
 ---
 
 Imagine que, toda noite, enquanto você desliga a mente para descansar, o seu cérebro chama uma equipe de limpeza urbana para o turno da madrugada. Não é força de expressão — é, literalmente, o que a ciência descobriu que acontece.

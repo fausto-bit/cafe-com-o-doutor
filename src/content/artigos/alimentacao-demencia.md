@@ -7,9 +7,15 @@ data: "2026-08-30"
 imagem_capa: "/img/img-mesa-posta.png"
 fonte: "Baseado em diretrizes da American Geriatrics Society (AGS) e da ESPEN"
 resumo_whatsapp: |
-  🍽️ *Recusa alimentar na demência quase nunca é falta de fome — é o ambiente, a textura ou o tempero competindo com o prato.*
+  📋 *Para levar com você*
 
-  Guia prático para a hora da refeição: como ajustar o ambiente e os pratos, por que não tirar o sal, quando amaciar a textura da comida, como reforçar calorias sem aumentar o prato, e os sinais de alerta de um engasgo perigoso (e o que fazer). Também aborda, com cuidado, a decisão entre sonda e alimentação de conforto nas fases mais avançadas. Artigo completo:
+  - Muita recusa alimentar não é falta de fome — é o ambiente competindo com o prato. Prato de cor forte, TV desligada, sempre no mesmo lugar e horário já fazem diferença.
+  - Se a pessoa está comendo pouco ou perdendo peso, *não é hora de tirar sal e tempero* — o paladar enfraquecido pode ser a causa da recusa, não o motivo para restringir mais.
+  - Postura na hora de comer importa de verdade: sempre sentada, tronco reto, e manter sentada por 30 minutos depois de comer, para reduzir risco de engasgo.
+  - *Engasgo com tosse:* incentive a tosse, não bata nas costas. *Engasgo silencioso* (sem som, lábios arroxeados): é emergência — manobra de Heimlich e SAMU (192) imediatamente.
+  - Antes de considerar sonda em fases avançadas, vale conversar com o médico sobre alimentação de conforto — as evidências mostram que a sonda não aumenta sobrevida nem evita pneumonia nessa fase.
+
+  No artigo completo eu explico o "chin-tuck" — um gesto simples ao engolir que reduz bastante o risco de engasgo:
 ---
 
 Poucas coisas doem tanto num filho ou numa filha quanto ver o pai ou a mãe recusando comida. A gente aprendeu, a vida inteira, que comida é cuidado — e de repente aquele prato volta cheio, ou a pessoa engasga, ou some o interesse por tudo que antes era prazer.

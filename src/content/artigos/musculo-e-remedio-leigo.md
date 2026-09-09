@@ -8,9 +8,15 @@ data: "2026-09-03"
 imagem_capa: "/img/capa-levantar-da-cadeira.jpg"
 resumo: "Quatro hábitos com evidência real para manter (ou recuperar) força, equilíbrio e independência — explicados sem jargão médico."
 resumo_whatsapp: |
-  💪 *Um estudo treinou idosos de 87 anos por dez semanas — e a força das pernas quase dobrou. Perder músculo não é destino.*
+  📋 *Para levar com você*
 
-  Quatro autotestes simples para saber onde você está, e quatro hábitos com evidência real para prevenir (ou reverter) a perda de força depois dos 60: treino de força, caminhada em ritmo de conversa, exercícios de equilíbrio e proteína em cada refeição. Artigo completo:
+  - Teste rápido em casa: sentar e levantar da cadeira sem usar as mãos, 30 segundos. Menos de 10 vezes (homens) ou 8 (mulheres) depois dos 70 anos é sinal de atenção.
+  - Treino de força 2 a 3x por semana é a intervenção com mais evidência para prevenir e reverter perda muscular — mais até do que suplemento.
+  - Meta de caminhada: 150 minutos por semana, no ritmo em que dá para conversar mas não para cantar.
+  - Proteína em cada refeição (não só no almoço) rende mais do que uma refeição enorme e o resto do dia sem proteína.
+  - Se dois ou mais testes vierem alterados, ou já houve queda recente, converse com o médico antes de intensificar exercício por conta própria.
+
+  No artigo completo eu conto sobre o estudo que treinou idosos de 87+ anos por dez semanas — e viu gente que entrou de andador sair andando sozinha:
 ---
 
 Existe um estudo, hoje clássico, que treinou idosos de um asilo — média de 87 anos, alguns com mais de 90 — com treino de força por dez semanas. Resultado: a força das pernas quase dobrou. Gente que entrou usando andador saiu andando sozinha.

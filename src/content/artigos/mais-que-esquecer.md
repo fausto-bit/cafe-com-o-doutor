@@ -8,9 +8,14 @@ data: "2026-09-08"
 imagem_capa: "/img/01-capa-labirinto.png"
 resumo: "O Alzheimer não é só sobre memória — é sobre perder autonomia aos poucos. Antes de qualquer diagnóstico, é essencial descartar causas com cura. E confusão que aparece de repente pode ser uma emergência, não Alzheimer."
 resumo_whatsapp: |
-  🧠 *Esquecer é normal. Repetir a mesma pergunta e não perceber é diferente*
+  📋 *Para levar com você*
 
-  O Alzheimer não é só sobre memória — é sobre perder autonomia aos poucos (cozinhar, cuidar do dinheiro, se orientar em casa). Antes de qualquer diagnóstico, é essencial descartar causas com cura (vitamina B12, tireoide, apneia do sono, infecção). E atenção: confusão que aparece de repente, em horas ou dias, não é Alzheimer — pode ser uma emergência (delirium) e precisa de pronto-socorro. Artigo completo com o checklist para a consulta:
+  - Se a confusão surgiu *de repente* (em horas ou poucos dias), não espere a consulta — é sinal de delirium, uma emergência geriátrica. Procure o pronto-socorro.
+  - Antes de qualquer diagnóstico de Alzheimer, é preciso descartar causas com cura: falta de vitamina B12, tireoide, apneia do sono, infecção urinária, remédio para dormir.
+  - Quem esquece geralmente não percebe o próprio esquecimento (é biológico, chama-se anosognosia). Brigar ou insistir que a pessoa está errada só aumenta a angústia — distrair e acolher funciona melhor.
+  - Antes da consulta, anote: quando começou, se foi gradual ou súbito, se mudou o sono ou o jeito de andar, se começou algum remédio novo recentemente.
+
+  No artigo completo eu explico por que só 35% dos idosos chegam à velhice sem nenhum desses sintomas — e por que o verdadeiro teste do Alzheimer não está no exame de sangue, está na cozinha:
 ---
 
 Esquecer onde deixou as chaves, ou o nome de um conhecido num dia corrido, é um lapso humano comum. Existe, porém, uma linha invisível onde o esquecimento deixa de ser um tropeço e passa a ser um sinal de alerta. Essa linha não é cruzada pelo esquecimento em si — é cruzada quando a mesma história é contada pela décima vez na mesma tarde, ou quando alguém esquece que acabou de fazer uma refeição.

@@ -6,9 +6,14 @@ autor: "Dr. Fausto Azambuja"
 data: "2026-09-07"
 imagem_capa: "/img/01-capa-casa-memorias.png"
 resumo_whatsapp: |
-  🏡 *Institucionalizar não é sempre abandono — às vezes é o único jeito de voltar a ser filho, e não só cuidador.*
+  📋 *Para levar com você*
 
-  Como saber quando a casa deixou de ser segura: a "regra dos três" nas atividades básicas de vida diária, o peso jurídico de virar empregador de cuidadores em casa, e por que uma ILPI regulada pode oferecer uma rede de segurança que nenhuma família monta sozinha. Artigo completo:
+  - Fique atento quando surgir dependência em *três ou mais* destas atividades: banho, vestir-se, transferências (cama-cadeira), uso do banheiro, alimentação. É o ponto em que o cuidado em casa vira trabalho técnico de 24h.
+  - Sintomas como agressividade, alucinações, sair andando sem rumo ou trocar o dia pela noite mudam o cálculo — nesses casos, o ambiente domiciliar pode se tornar inseguro mesmo com boa vontade da família.
+  - Contratar cuidador direto em casa torna a família empregadora, com risco jurídico e trabalhista real — vale pesar isso na decisão.
+  - A decisão nunca deve se basear só na doença: pese capacidade funcional do idoso, capacidade real de quem cuida (saúde e tempo) e segurança da casa.
+
+  No artigo completo eu conto por que, muitas vezes, institucionalizar não é abandono — é o caminho que devolve à família o papel de filho, não de cuidador exausto:
 ---
 
 A casa de um idoso é tecida por fios invisíveis de memória. É o cheiro do café na cozinha, a poltrona gasta onde décadas de histórias foram lidas, o silêncio familiar dos cômodos. Para muitas famílias, manter o idoso nesse ambiente é uma promessa de honra.

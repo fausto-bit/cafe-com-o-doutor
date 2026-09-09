@@ -6,9 +6,15 @@ autor: "Dr. Fausto Azambuja"
 data: "2026-09-05"
 imagem_capa: "/img/01-capa-caixa-sapato.jpg"
 resumo_whatsapp: |
-  💊 *Uma das causas mais comuns de internação de idosos não é uma doença nova — é o próprio tratamento.*
+  📋 *Para levar com você*
 
-  Por que o idoso é mais vulnerável a efeitos colaterais, o que é a "cascata terapêutica" (quando um remédio novo trata um efeito colateral do remédio anterior), por que a caixa de sapato com remédios misturados é um risco, e um checklist prático para organizar a medicação em casa com segurança. Artigo completo:
+  - Nunca guarde todos os remédios misturados numa única caixa — os dois erros mais perigosos do dia a dia são dose dobrada (tomar de novo por esquecimento) e dose esquecida.
+  - Prefira um sistema organizado por horário (organizador semanal ou envelopes por dose) em vez da "caixinha de sapato".
+  - Sempre conte ao médico sobre chás e fitoterápicos — ginkgo, alho e ginseng aumentam sangramento em quem usa anticoagulante; erva de São João interage com antidepressivo.
+  - Nunca pare um remédio por conta própria — alguns, como benzodiazepínicos, podem causar convulsão se interrompidos de forma abrupta. Questione com acompanhamento médico.
+  - Leve, a cada consulta, uma lista atualizada com nome, dose, horário e frequência de tudo o que é tomado.
+
+  No artigo completo eu explico a "cascata terapêutica" — o erro silencioso em que um remédio novo é prescrito para tratar o efeito colateral de outro:
 ---
 
 Você já parou para pensar que uma das causas mais comuns de internação de idosos não é uma doença nova — é o próprio tratamento?
