@@ -10,9 +10,11 @@ interface Props {
   data?: string;
   imagem_capa?: string;
   resumo?: string;
+  resumoWhatsapp?: string;
 }
 
-const { titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo } = Astro.props;
+const { titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo, resumoWhatsapp } =
+  Astro.props;
 
 const dataFormatada = data
   ? new Date(`${data}T00:00:00`).toLocaleDateString('pt-BR', {
@@ -46,8 +48,37 @@ const dataFormatada = data
     <div class="prose">
       <slot />
     </div>
+
+    {resumoWhatsapp && (
+      <div class="copiar-whatsapp">
+        <button id="copyWhatsappBtn" type="button" class="btn btn-pill btn-outline" data-resumo={resumoWhatsapp}>
+          Copiar resumo para WhatsApp
+        </button>
+      </div>
+    )}
   </article>
 </BaseLayout>
+
+{resumoWhatsapp && (
+  <script>
+    const btn = document.getElementById('copyWhatsappBtn');
+    if (btn instanceof HTMLButtonElement) {
+      const original = btn.textContent;
+      btn.addEventListener('click', async () => {
+        const texto = `${btn.dataset.resumo ?? ''}\n${window.location.href}`;
+        try {
+          await navigator.clipboard.writeText(texto);
+          btn.textContent = 'Copiado!';
+        } catch {
+          btn.textContent = 'Não foi possível copiar';
+        }
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 2000);
+      });
+    }
+  </script>
+)}
 
 <style>
   .artigo {
@@ -78,6 +109,10 @@ const dataFormatada = data
   }
   .steam-divider {
     margin-top: 4px;
+  }
+  .copiar-whatsapp {
+    text-align: center;
+    margin-top: 24px;
   }
 </style>
 

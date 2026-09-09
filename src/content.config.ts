@@ -13,6 +13,7 @@ const artigos = defineCollection({
     imagem_capa: z.string().optional().default(''),
     fonte: z.string().optional(),
     resumo: z.string().optional(),
+    resumo_whatsapp: z.string().optional(),
   }),
 });
 

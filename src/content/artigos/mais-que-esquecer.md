@@ -7,6 +7,10 @@ autor: "Dr. Fausto Azambuja"
 data: "2026-09-08"
 imagem_capa: "/img/01-capa-labirinto.png"
 resumo: "O Alzheimer não é só sobre memória — é sobre perder autonomia aos poucos. Antes de qualquer diagnóstico, é essencial descartar causas com cura. E confusão que aparece de repente pode ser uma emergência, não Alzheimer."
+resumo_whatsapp: |
+  🧠 *Esquecer é normal. Repetir a mesma pergunta e não perceber é diferente*
+
+  O Alzheimer não é só sobre memória — é sobre perder autonomia aos poucos (cozinhar, cuidar do dinheiro, se orientar em casa). Antes de qualquer diagnóstico, é essencial descartar causas com cura (vitamina B12, tireoide, apneia do sono, infecção). E atenção: confusão que aparece de repente, em horas ou dias, não é Alzheimer — pode ser uma emergência (delirium) e precisa de pronto-socorro. Artigo completo com o checklist para a consulta:
 ---
 
 Esquecer onde deixou as chaves, ou o nome de um conhecido num dia corrido, é um lapso humano comum. Existe, porém, uma linha invisível onde o esquecimento deixa de ser um tropeço e passa a ser um sinal de alerta. Essa linha não é cruzada pelo esquecimento em si — é cruzada quando a mesma história é contada pela décima vez na mesma tarde, ou quando alguém esquece que acabou de fazer uma refeição.
