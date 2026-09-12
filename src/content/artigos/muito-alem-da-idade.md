@@ -46,8 +46,8 @@ O objetivo não é apenas somar anos ao calendário. É retardar ao máximo qual
 
 O geriatra não olha só para exames de sangue. Ele usa escalas funcionais para entender como o paciente realmente interage com o mundo — as duas bússolas principais são:
 
-- **Escala de Katz** (atividades básicas de vida diária): mede o autocuidado — tomar banho, vestir-se, usar o banheiro, comer sozinho.
-- **Escala de Lawton** (atividades instrumentais): mede habilidades mais refinadas — usar o telefone, dirigir, administrar o próprio dinheiro, ir à padaria sozinho.
+- **Escala de Katz** (<a href="https://www.cognisa.med.br/cognisa-katz-abvd.html" target="_blank" rel="noopener">atividades básicas de vida diária</a>): mede o autocuidado — tomar banho, vestir-se, usar o banheiro, comer sozinho.
+- **Escala de Lawton** (<a href="https://www.cognisa.med.br/cognisa-lawton-aivd.html" target="_blank" rel="noopener">atividades instrumentais</a>): mede habilidades mais refinadas — usar o telefone, dirigir, administrar o próprio dinheiro, ir à padaria sozinho.
 
 Essas escalas contam uma história que o exame de sangue não conta: a de como a doença — ou a ausência dela — se traduz no dia a dia real da pessoa.
 
@@ -116,3 +116,5 @@ Ao escolher seu geriatra, vale verificar o **RQE** (Registro de Qualificação d
 ---
 
 Se o envelhecimento é inevitável, mas a dependência não é — **o que você está fazendo hoje para garantir que sua mente e seu corpo continuem sendo seus melhores aliados amanhã?**
+
+🎥 Esse artigo nasceu de um vídeo que gravei sobre o tema — <a href="https://youtu.be/YK4MwdtPwxI?si=MRZJ9pxEu0L2U0WV" target="_blank" rel="noopener">assista no YouTube</a>.
