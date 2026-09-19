@@ -7,7 +7,7 @@ const artigos = (await getCollection('artigos')).sort((a, b) =>
 );
 ---
 
-<BaseLayout title="Café com o Doutor — um blog de bolso sobre envelhecer bem" showTelegram={true}>
+<BaseLayout title="Café com o Doutor — um blog de bolso sobre envelhecer bem" showTelegram={true} canonicalPath="/">
   <section class="hero wrap">
     <p class="eyebrow">um blog de bolso sobre envelhecer bem</p>
     <h1 class="font-display">Café com o Doutor</h1>
@@ -17,7 +17,7 @@ const artigos = (await getCollection('artigos')).sort((a, b) =>
     </p>
     <div class="hero-ctas">
       {artigos[0] && (
-        <a class="btn btn-pill btn-coral" href={`/artigos/${artigos[0].id}`}>Ler o último ensaio</a>
+        <a class="btn btn-pill btn-coral" href={`/artigos/${artigos[0].id}/`}>Ler o último ensaio</a>
       )}
       <a class="btn btn-pill btn-outline" href="#sobre">Sobre este espaço</a>
     </div>
@@ -33,7 +33,7 @@ const artigos = (await getCollection('artigos')).sort((a, b) =>
     <ul class="menu">
       {artigos.map((artigo) => (
         <li>
-          <a href={`/artigos/${artigo.id}`} class="menu-item">
+          <a href={`/artigos/${artigo.id}/`} class="menu-item">
             <div class="menu-item-text">
               <span class="tag">{artigo.data.categoria}</span>
               <h3 class="font-display">{artigo.data.titulo}</h3>

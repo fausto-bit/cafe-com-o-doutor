@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {
+  slug: string;
   titulo: string;
   subtitulo?: string;
   categoria: string;
@@ -13,7 +14,7 @@ interface Props {
   resumoWhatsapp?: string;
 }
 
-const { titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo, resumoWhatsapp } =
+const { slug, titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo, resumoWhatsapp } =
   Astro.props;
 
 const dataFormatada = data
@@ -29,6 +30,7 @@ const dataFormatada = data
   title={`${titulo} — Café com o Doutor`}
   description={resumo}
   ogImage={imagem_capa || undefined}
+  canonicalPath={`/artigos/${slug}/`}
 >
   <article class="wrap artigo">
     <header class="artigo-header">
