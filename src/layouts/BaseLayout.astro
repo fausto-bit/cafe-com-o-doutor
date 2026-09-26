@@ -82,6 +82,15 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
     </section>
 
     <footer class="site-footer">
+      <div class="ecosystem-footer">
+        <p class="eco-title">Ecossistema Dr. Fausto Azambuja</p>
+        <p class="eco-nav">
+          <a href="https://drfaustoazambuja.com.br" target="_blank" rel="noopener">Consulta</a> ·
+          <a href="/">Conhecimento</a> ·
+          <a href="https://cognisa.med.br" target="_blank" rel="noopener">Método</a>
+        </p>
+        <p class="eco-tagline">Ciência para envelhecer melhor.</p>
+      </div>
       <div class="wrap footer-inner">
         <a class="brand" href="/">
           <img src="/img/logo.jpg" alt="Café com o Doutor" class="brand-mark" />
@@ -350,6 +359,42 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
   .footer-note {
     color: var(--clay);
     font-size: 0.82rem;
+    margin: 0;
+  }
+
+  /* Rodapé de ecossistema — cruza com drfaustoazambuja.com.br e cognisa.med.br,
+     mantendo a identidade visual do Café (não reproduz paleta/tipografia deles) */
+  .ecosystem-footer {
+    text-align: center;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .ecosystem-footer .eco-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .ecosystem-footer .eco-nav {
+    font-size: 0.8125rem;
+    color: var(--clay);
+    margin: 0 0 6px;
+  }
+  .ecosystem-footer .eco-nav a {
+    color: var(--coral);
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: 700;
+  }
+  .ecosystem-footer .eco-nav a:hover {
+    text-decoration: underline;
+  }
+  .ecosystem-footer .eco-tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: var(--clay);
     margin: 0;
   }
 </style>
