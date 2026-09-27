@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { slugifyCategoria } from '../lib/slugify.mjs';
 
 interface Props {
   slug: string;
@@ -24,6 +25,14 @@ const dataFormatada = data
       year: 'numeric',
     })
   : null;
+
+const catSlug = slugifyCategoria(categoria);
+const catPath = `/categoria/${catSlug}/`;
+const breadcrumbs = [
+  { name: 'Café com o Doutor', path: '/' },
+  { name: categoria, path: catPath },
+  { name: titulo, path: `/artigos/${slug}/` },
+];
 ---
 
 <BaseLayout
@@ -32,10 +41,15 @@ const dataFormatada = data
   ogImage={imagem_capa || undefined}
   canonicalPath={`/artigos/${slug}/`}
   articleMeta={{ headline: titulo, autor, datePublished: data || undefined }}
+  breadcrumbs={breadcrumbs}
 >
   <article class="wrap artigo">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Início</a> <span class="sep" aria-hidden="true">/</span>
+      <a href={catPath}>{categoria}</a>
+    </nav>
     <header class="artigo-header">
-      <span class="tag">{categoria}</span>
+      <a class="tag" href={catPath}>{categoria}</a>
       <h1 class="font-display">{titulo}</h1>
       {subtitulo && <p class="subtitulo">{subtitulo}</p>}
       <p class="meta">
@@ -87,6 +101,9 @@ const dataFormatada = data
   .artigo {
     padding-top: 48px;
     padding-bottom: 64px;
+  }
+  .artigo :global(.breadcrumbs) {
+    text-align: center;
   }
   .artigo-header {
     text-align: center;

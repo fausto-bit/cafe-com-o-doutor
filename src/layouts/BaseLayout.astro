@@ -5,6 +5,11 @@ interface ArticleMeta {
   datePublished?: string;
 }
 
+interface Breadcrumb {
+  name: string;
+  path: string;
+}
+
 interface Props {
   title: string;
   description?: string;
@@ -12,6 +17,7 @@ interface Props {
   showTelegram?: boolean;
   canonicalPath?: string;
   articleMeta?: ArticleMeta;
+  breadcrumbs?: Breadcrumb[];
 }
 
 const {
@@ -21,6 +27,7 @@ const {
   showTelegram = false,
   canonicalPath = Astro.url.pathname,
   articleMeta,
+  breadcrumbs,
 } = Astro.props;
 
 const canonicalURL = new URL(canonicalPath, Astro.site);
@@ -55,6 +62,20 @@ const jsonLd = articleMeta
       },
     }
   : null;
+
+const breadcrumbJsonLd =
+  breadcrumbs && breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((crumb, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: crumb.name,
+          item: new URL(crumb.path, Astro.site).toString(),
+        })),
+      }
+    : null;
 ---
 
 <!doctype html>
@@ -76,6 +97,7 @@ const jsonLd = articleMeta
     {articleMeta && <meta name="author" content={articleMeta.autor} />}
     {articleMeta && <meta property="article:author" content={authorURL} />}
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    {breadcrumbJsonLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -308,6 +330,73 @@ const jsonLd = articleMeta
     font-weight: 700;
     padding: 4px 12px;
     border-radius: 100px;
+    text-decoration: none;
+  }
+  a.tag:hover {
+    border-color: var(--coral);
+    color: var(--coral);
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs {
+    font-size: 0.82rem;
+    color: var(--clay);
+    margin-bottom: 12px;
+  }
+  .breadcrumbs a {
+    color: var(--clay);
+    text-decoration: none;
+  }
+  .breadcrumbs a:hover {
+    color: var(--coral);
+    text-decoration: underline;
+  }
+  .breadcrumbs .sep {
+    margin: 0 6px;
+    opacity: 0.6;
+  }
+
+  /* Menu list (home "cardápio" and category hub pages) */
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 24px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .menu-item:hover {
+    border-color: var(--coral);
+    transform: translateY(-1px);
+  }
+  .menu-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .menu-item-text h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .menu-time {
+    color: var(--clay);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   /* Steam divider */

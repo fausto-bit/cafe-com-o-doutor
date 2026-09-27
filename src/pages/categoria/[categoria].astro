@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { slugifyCategoria } from '../../lib/slugify.mjs';
+
+export async function getStaticPaths() {
+  const artigos = await getCollection('artigos');
+  const categorias = [...new Set(artigos.map((a) => a.data.categoria))];
+
+  return categorias.map((categoria) => ({
+    params: { categoria: slugifyCategoria(categoria) },
+    props: {
+      categoria,
+      artigos: artigos
+        .filter((a) => a.data.categoria === categoria)
+        .sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '')),
+    },
+  }));
+}
+
+const { categoria, artigos } = Astro.props;
+const catSlug = slugifyCategoria(categoria);
+const catPath = `/categoria/${catSlug}/`;
+---
+
+<BaseLayout
+  title={`${categoria} — Café com o Doutor`}
+  description={`Ensaios e guias práticos na categoria ${categoria}, por Dr. Fausto Azambuja.`}
+  canonicalPath={catPath}
+  breadcrumbs={[
+    { name: 'Café com o Doutor', path: '/' },
+    { name: categoria, path: catPath },
+  ]}
+>
+  <section class="categoria-page wrap">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Início</a> <span class="sep" aria-hidden="true">/</span> {categoria}
+    </nav>
+    <h1 class="font-display">{categoria}</h1>
+    <p class="categoria-count">
+      {artigos.length} {artigos.length === 1 ? 'ensaio' : 'ensaios'}
+    </p>
+    <ul class="menu">
+      {artigos.map((artigo) => (
+        <li>
+          <a href={`/artigos/${artigo.id}/`} class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="font-display">{artigo.data.titulo}</h3>
+            </div>
+            <span class="menu-time">{artigo.data.tempo_leitura}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .categoria-page {
+    padding: 40px 0 56px;
+  }
+  .categoria-page h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .categoria-count {
+    color: var(--clay);
+    font-size: 0.9rem;
+    margin: 0 0 24px;
+  }
+</style>

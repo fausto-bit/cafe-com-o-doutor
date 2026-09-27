@@ -102,47 +102,6 @@ const artigos = (await getCollection('artigos')).sort((a, b) =>
     font-style: italic;
     margin-bottom: 24px;
   }
-  .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    text-decoration: none;
-    color: var(--ink);
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 20px 24px;
-    transition: border-color 0.15s ease, transform 0.15s ease;
-  }
-  .menu-item:hover {
-    border-color: var(--coral);
-    transform: translateY(-1px);
-  }
-  .menu-item-text {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .menu-item-text h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    font-style: italic;
-  }
-  .menu-time {
-    color: var(--clay);
-    font-size: 0.85rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
 
   .sobre {
     padding-top: 8px;
