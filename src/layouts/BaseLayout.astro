@@ -117,7 +117,6 @@ const breadcrumbJsonLd =
         </a>
         <nav class="nav-links">
           <a href="/sobre">Sobre</a>
-          <a href="/#assinar" class="btn btn-pill btn-coral">Assinar</a>
         </nav>
       </div>
     </header>
@@ -126,25 +125,16 @@ const breadcrumbJsonLd =
       <slot />
     </main>
 
-    <section class="substack-strip" id="assinar">
-      <div class="wrap substack-inner">
-        <div>
-          <h2>Receba os ensaios por e-mail</h2>
-          <p>Tudo que nasce aqui também chega direto na sua caixa de entrada, pelo Substack.</p>
-        </div>
-        <a class="btn btn-pill btn-coral" href="https://substack.com/@drfaustoazambuja" target="_blank" rel="noopener">
-          Assinar no Substack
-        </a>
-      </div>
-      {showTelegram && (
-        <div class="wrap telegram-cta-wrap">
+    {showTelegram && (
+      <section class="telegram-strip">
+        <div class="wrap">
           <a class="btn btn-pill btn-coral telegram-cta" href="https://t.me/faustodr" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
-            Prefere Telegram a e-mail? Os ensaios também chegam lá, com espaço pra comentar.
+            Acompanhe os ensaios pelo Telegram, com espaço pra comentar.
           </a>
         </div>
-      )}
-    </section>
+      </section>
+    )}
 
     <footer class="site-footer">
       <div class="ecosystem-footer">
@@ -427,32 +417,12 @@ const breadcrumbJsonLd =
     }
   }
 
-  /* Substack strip */
-  .substack-strip {
+  /* Telegram strip */
+  .telegram-strip {
     background: var(--card);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
-  }
-  .substack-inner {
-    max-width: 920px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .substack-inner h2 {
-    font-size: 1.4rem;
-    margin-bottom: 6px;
-  }
-  .substack-inner p {
-    color: var(--clay);
-    margin: 0;
-  }
-  .telegram-cta-wrap {
-    padding-bottom: 40px;
+    padding: 40px 0;
     text-align: center;
   }
   .telegram-cta {
