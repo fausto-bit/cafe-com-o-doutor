@@ -1,10 +1,17 @@
 ---
+interface ArticleMeta {
+  headline: string;
+  autor: string;
+  datePublished?: string;
+}
+
 interface Props {
   title: string;
   description?: string;
   ogImage?: string;
   showTelegram?: boolean;
   canonicalPath?: string;
+  articleMeta?: ArticleMeta;
 }
 
 const {
@@ -13,9 +20,41 @@ const {
   ogImage = '/img/logo.jpg',
   showTelegram = false,
   canonicalPath = Astro.url.pathname,
+  articleMeta,
 } = Astro.props;
 
 const canonicalURL = new URL(canonicalPath, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+const authorURL = new URL('/sobre', Astro.site);
+
+const jsonLd = articleMeta
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: articleMeta.headline,
+      description,
+      image: ogImageURL.toString(),
+      author: {
+        '@type': 'Person',
+        name: articleMeta.autor,
+        url: authorURL.toString(),
+        sameAs: ['https://www.drfaustoazambuja.com.br/'],
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Café com o Doutor',
+        logo: {
+          '@type': 'ImageObject',
+          url: new URL('/img/logo.jpg', Astro.site).toString(),
+        },
+      },
+      ...(articleMeta.datePublished ? { datePublished: articleMeta.datePublished } : {}),
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonicalURL.toString(),
+      },
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -30,9 +69,13 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:image" content={ogImageURL} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={articleMeta ? 'article' : 'website'} />
+
+    {articleMeta && <meta name="author" content={articleMeta.autor} />}
+    {articleMeta && <meta property="article:author" content={authorURL} />}
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,6 +95,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
         </a>
         <nav class="nav-links">
           <a href="/#cardapio">Ensaios</a>
+          <a href="/sobre">Sobre</a>
           <a href="/#assinar" class="btn btn-pill btn-coral">Assinar</a>
         </nav>
       </div>

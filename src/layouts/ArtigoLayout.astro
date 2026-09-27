@@ -31,6 +31,7 @@ const dataFormatada = data
   description={resumo}
   ogImage={imagem_capa || undefined}
   canonicalPath={`/artigos/${slug}/`}
+  articleMeta={{ headline: titulo, autor, datePublished: data || undefined }}
 >
   <article class="wrap artigo">
     <header class="artigo-header">

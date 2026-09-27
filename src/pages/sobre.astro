@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Sobre — Café com o Doutor"
+  description="Dr. Fausto Azambuja, médico geriatra em Belo Horizonte — CRM-MG 39.242, RQE Geriatria 15.603, RQE Clínica Médica 15.602."
+  canonicalPath="/sobre"
+>
+  <section class="sobre-page wrap">
+    <h1 class="font-display">Sobre</h1>
+    <p>
+      Sou o Dr. Fausto Azambuja, médico geriatra em Belo Horizonte, com mais de vinte anos de
+      consultório.
+    </p>
+    <p>
+      Nesse tempo todo, aprendi que a Medicina fala demais sobre doença — e pouco sobre o resto:
+      força, memória, propósito, autonomia. O Café com o Doutor nasceu para ocupar esse espaço:
+      músculo tanto quanto medicamento, prevenção tanto quanto diagnóstico, propósito tanto quanto
+      exame. Envelhecer bem não é apenas não estar doente.
+    </p>
+    <p>Os textos nascem primeiro aqui — antes de qualquer outro lugar, inclusive da newsletter.</p>
+
+    <div class="credenciais">
+      <p><strong>CRM-MG</strong> 39.242</p>
+      <p><strong>RQE Geriatria</strong> 15.603</p>
+      <p><strong>RQE Clínica Médica</strong> 15.602</p>
+    </div>
+
+    <p>
+      Para conhecer o trabalho clínico, visite
+      <a href="https://drfaustoazambuja.com.br" target="_blank" rel="noopener">drfaustoazambuja.com.br</a>.
+      Para o método de avaliação geriátrica longitudinal, veja o
+      <a href="https://cognisa.med.br" target="_blank" rel="noopener">COGNISA</a>.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .sobre-page {
+    padding: 56px 0 64px;
+  }
+  .sobre-page h1 {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .sobre-page p {
+    color: var(--ink);
+    max-width: 62ch;
+  }
+  .credenciais {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 24px 0;
+    padding: 16px 20px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    max-width: fit-content;
+  }
+  .credenciais p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--clay);
+  }
+  .sobre-page a {
+    color: var(--coral-deep);
+  }
+</style>
