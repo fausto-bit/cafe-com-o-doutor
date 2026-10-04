@@ -52,3 +52,16 @@ export function slugTema(tag: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+// Temas em uso (com contagem), mais frequentes primeiro, desempate alfabético pelo rótulo.
+export function temasEmUso(artigos: { data: { tags?: string[] } }[]) {
+  const contagem = new Map<TagKey, number>();
+  for (const a of artigos) {
+    for (const t of (a.data.tags ?? []) as TagKey[]) {
+      contagem.set(t, (contagem.get(t) ?? 0) + 1);
+    }
+  }
+  return [...contagem.entries()]
+    .map(([tag, n]) => ({ tag, n, ...TEMAS[tag], slug: slugTema(tag) }))
+    .sort((a, b) => b.n - a.n || a.rotulo.localeCompare(b.rotulo, 'pt-BR'));
+}

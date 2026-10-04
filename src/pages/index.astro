@@ -1,10 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ArtigoItem from '../components/ArtigoItem.astro';
+import { temasEmUso } from '../data/tags';
 
 const artigos = (await getCollection('artigos')).sort((a, b) =>
   (b.data.data ?? '').localeCompare(a.data.data ?? '')
 );
+const temas = temasEmUso(artigos);
 ---
 
 <BaseLayout title="Café com o Doutor — um blog de bolso sobre envelhecer bem" showTelegram={true} canonicalPath="/">
@@ -28,20 +31,25 @@ const artigos = (await getCollection('artigos')).sort((a, b) =>
     <path d="M2 16 Q 15 0, 30 8 T 58 8 T 86 8 T 114 8" />
   </svg>
 
+  {temas.length > 0 && (
+    <section class="assuntos wrap" aria-labelledby="assuntos-titulo">
+      <h2 id="assuntos-titulo" class="font-display">Assuntos</h2>
+      <ul class="assuntos-lista">
+        {temas.map((t) => (
+          <li>
+            <a href={`/temas/${t.slug}/`} class="assunto-chip">
+              {t.rotulo} <span class="assunto-n">{t.n}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
   <section class="cardapio wrap" id="cardapio">
     <h2 class="font-display">Hoje no cardápio</h2>
     <ul class="menu">
-      {artigos.map((artigo) => (
-        <li>
-          <a href={`/artigos/${artigo.id}/`} class="menu-item">
-            <div class="menu-item-text">
-              <span class="tag">{artigo.data.categoria}</span>
-              <h3 class="font-display">{artigo.data.titulo}</h3>
-            </div>
-            <span class="menu-time">{artigo.data.tempo_leitura}</span>
-          </a>
-        </li>
-      ))}
+      {artigos.map((artigo) => <ArtigoItem artigo={artigo} showCategoria={true} />)}
     </ul>
   </section>
 
@@ -91,6 +99,57 @@ const artigos = (await getCollection('artigos')).sort((a, b) =>
   .steam-divider {
     display: block;
     margin: 8px auto 0;
+  }
+
+  .assuntos {
+    padding-top: 32px;
+  }
+  .assuntos > h2 {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+  .assuntos-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  @media (max-width: 640px) {
+    .assuntos-lista {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scroll-snap-type: x proximity;
+    }
+    .assuntos-lista li {
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
+  }
+  .assunto-chip {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.88rem;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 6px 14px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .assunto-chip:hover {
+    border-color: var(--coral);
+    color: var(--coral-deep);
+  }
+  .assunto-n {
+    color: var(--clay);
+    font-size: 0.78rem;
+    margin-left: 4px;
   }
 
   .cardapio {

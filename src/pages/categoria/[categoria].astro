@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { slugifyCategoria } from '../../lib/slugify.mjs';
+import ArtigoItem from '../../components/ArtigoItem.astro';
 
 export async function getStaticPaths() {
   const artigos = await getCollection('artigos');
@@ -41,16 +42,7 @@ const catPath = `/categoria/${catSlug}/`;
       {artigos.length} {artigos.length === 1 ? 'ensaio' : 'ensaios'}
     </p>
     <ul class="menu">
-      {artigos.map((artigo) => (
-        <li>
-          <a href={`/artigos/${artigo.id}/`} class="menu-item">
-            <div class="menu-item-text">
-              <h3 class="font-display">{artigo.data.titulo}</h3>
-            </div>
-            <span class="menu-time">{artigo.data.tempo_leitura}</span>
-          </a>
-        </li>
-      ))}
+      {artigos.map((artigo) => <ArtigoItem artigo={artigo} />)}
     </ul>
   </section>
 </BaseLayout>

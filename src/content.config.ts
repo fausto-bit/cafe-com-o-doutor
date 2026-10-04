@@ -16,7 +16,7 @@ const artigos = defineCollection({
     resumo: z.string().optional(),
     resumo_whatsapp: z.string().optional(),
     descricao: z.string().optional(),
-    tags: z.array(z.enum(TAG_KEYS)).min(3).max(6).optional(),
+    tags: z.array(z.enum(TAG_KEYS)).min(3).max(6),
   }),
 });
 

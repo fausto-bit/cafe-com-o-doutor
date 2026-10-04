@@ -1,0 +1,40 @@
+---
+interface Props {
+  artigo: {
+    id: string;
+    data: { titulo: string; categoria: string; tempo_leitura: string; tags?: string[] };
+  };
+  showCategoria?: boolean;
+}
+
+const { artigo, showCategoria = false } = Astro.props;
+const hashtags = (artigo.data.tags ?? []).slice(0, 3);
+---
+
+<li>
+  <a href={`/artigos/${artigo.id}/`} class="menu-item">
+    <div class="menu-item-text">
+      {showCategoria && <span class="tag">{artigo.data.categoria}</span>}
+      <h3 class="font-display">{artigo.data.titulo}</h3>
+      {hashtags.length > 0 && (
+        <span class="menu-hashtags">
+          {hashtags.map((tag) => (
+            <span>#{tag}</span>
+          ))}
+        </span>
+      )}
+    </div>
+    <span class="menu-time">{artigo.data.tempo_leitura}</span>
+  </a>
+</li>
+
+<style>
+  .menu-hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.8rem;
+    color: var(--coral-deep);
+  }
+</style>

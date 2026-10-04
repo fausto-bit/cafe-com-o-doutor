@@ -1,6 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { slugifyCategoria } from '../lib/slugify.mjs';
+import AutorBox from '../components/AutorBox.astro';
+import { slugTema } from '../data/tags';
 
 interface Props {
   slug: string;
@@ -12,12 +14,25 @@ interface Props {
   data?: string;
   imagem_capa?: string;
   resumo?: string;
+  descricao?: string;
   resumoWhatsapp?: string;
   tags?: string[];
 }
 
-const { slug, titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo, resumoWhatsapp, tags } =
-  Astro.props;
+const {
+  slug,
+  titulo,
+  subtitulo,
+  categoria,
+  tempo_leitura,
+  autor,
+  data,
+  imagem_capa,
+  resumo,
+  descricao,
+  resumoWhatsapp,
+  tags,
+} = Astro.props;
 
 const dataFormatada = data
   ? new Date(`${data}T00:00:00`).toLocaleDateString('pt-BR', {
@@ -38,7 +53,7 @@ const breadcrumbs = [
 
 <BaseLayout
   title={`${titulo} — Café com o Doutor`}
-  description={resumo}
+  description={descricao ?? resumo ?? subtitulo}
   ogImage={imagem_capa || undefined}
   canonicalPath={`/artigos/${slug}/`}
   keywords={tags}
@@ -57,7 +72,7 @@ const breadcrumbs = [
       {tags && tags.length > 0 && (
         <p class="hashtags">
           {tags.map((tag) => (
-            <span>#{tag}</span>
+            <a href={`/temas/${slugTema(tag)}/`}>#{tag}</a>
           ))}
         </p>
       )}
@@ -82,6 +97,8 @@ const breadcrumbs = [
         </button>
       </div>
     )}
+
+    <AutorBox />
   </article>
 </BaseLayout>
 
@@ -141,6 +158,13 @@ const breadcrumbs = [
     flex-wrap: wrap;
     justify-content: center;
     gap: 4px 12px;
+  }
+  .hashtags a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .hashtags a:hover {
+    text-decoration: underline;
   }
   .meta {
     color: var(--clay);

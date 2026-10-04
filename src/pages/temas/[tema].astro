@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArtigoItem from '../../components/ArtigoItem.astro';
+import { TEMAS, temasEmUso, type TagKey } from '../../data/tags';
+
+export async function getStaticPaths() {
+  const artigos = await getCollection('artigos');
+  return temasEmUso(artigos).map(({ tag, slug }) => ({
+    params: { tema: slug },
+    props: {
+      tag,
+      artigos: artigos
+        .filter((a) => (a.data.tags ?? []).includes(tag))
+        .sort((a, b) => (b.data.data ?? '').localeCompare(a.data.data ?? '')),
+    },
+  }));
+}
+
+const { tag, artigos } = Astro.props as { tag: TagKey; artigos: any[] };
+const { rotulo, frase } = TEMAS[tag];
+const temaPath = `/temas/${Astro.params.tema}/`;
+---
+
+<BaseLayout
+  title={`${rotulo} — Café com o Doutor`}
+  description={frase}
+  canonicalPath={temaPath}
+  breadcrumbs={[
+    { name: 'Café com o Doutor', path: '/' },
+    { name: rotulo, path: temaPath },
+  ]}
+>
+  <section class="tema-page wrap">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <a href="/">Início</a> <span class="sep" aria-hidden="true">/</span> {rotulo}
+    </nav>
+    <h1 class="font-display">{rotulo}</h1>
+    <p class="tema-frase">{frase}</p>
+    <p class="tema-count">
+      {artigos.length} {artigos.length === 1 ? 'ensaio' : 'ensaios'}
+    </p>
+    <ul class="menu">
+      {artigos.map((artigo) => <ArtigoItem artigo={artigo} showCategoria={true} />)}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .tema-page {
+    padding: 40px 0 56px;
+  }
+  .tema-page h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .tema-frase {
+    color: var(--ink);
+    max-width: 56ch;
+    margin: 0 0 6px;
+  }
+  .tema-count {
+    color: var(--clay);
+    font-size: 0.9rem;
+    margin: 0 0 24px;
+  }
+</style>
