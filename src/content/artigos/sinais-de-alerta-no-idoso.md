@@ -5,7 +5,6 @@ categoria: "Família"
 tempo_leitura: "12 min"
 autor: "Dr. Fausto Azambuja"
 data: "2026-10-03"
-resumo: "No idoso, a doença raramente começa com febre alta ou dor forte. Veja o que exige o 192, o que exige pronto-socorro hoje e o que pede uma conversa com o médico nos próximos dias."
 resumo_whatsapp: |
   📋 *Para levar com você*
 
@@ -17,6 +16,8 @@ resumo_whatsapp: |
   Folha para deixar à vista: https://cognisa.med.br/materiais/pdf/sinais-que-nao-esperam.pdf
 
   No artigo completo eu explico cada sinal e o que dizer ao ligar:
+descricao: "Quando ligar para o 192, quando ir ao pronto-socorro e quando conversar com o médico: os sinais de alerta no idoso que a família precisa reconhecer."
+tags: ["sinaisDeAlerta","emergência","delirium","quedas","cuidador"]
 ---
 
 "Hoje ele está diferente."

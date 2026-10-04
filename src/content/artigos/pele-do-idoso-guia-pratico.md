@@ -6,7 +6,6 @@ tempo_leitura: "20 min"
 autor: "Dr. Fausto Azambuja"
 data: "2026-10-03"
 imagem_capa: "/img/02-hidratacao-antebraco.png"
-resumo: "Roxos, rasgos, mancha vermelha no calcanhar: quase tudo isso se previne com seis cuidados simples. Veja o que fazer em casa com o banho, o hidratante, a fralda, os pés e quando procurar atendimento."
 resumo_whatsapp: |
   📋 *Para levar com você*
 
@@ -19,6 +18,8 @@ resumo_whatsapp: |
   Guia em PDF para imprimir e marcar o que você já faz: https://cognisa.med.br/materiais/pdf/minha-pele-protegida.pdf
 
   No artigo completo eu explico cada cuidado, passo a passo:
+descricao: "Cuidados com a pele do idoso: banho, hidratação, umidade, pontos de pressão, pés, sol e os sinais de alerta, em linguagem prática para a família."
+tags: ["pele","prevenção","cuidador","nutrição"]
 ---
 
 Existe uma cena que se repete em muitas casas. A filha ajuda o pai a trocar de camisa e encontra, no antebraço, um roxo do tamanho de uma moeda que ninguém sabe de onde veio. Ou a esposa cuida do marido que passa os dias na cama e, depois de uma semana difícil, com pouca comida e pouco movimento, descobre uma mancha vermelha no calcanhar. Ou a mão de um idoso roça de leve no braço da poltrona e, de repente, um pedaço de pele se solta e o sangue aparece.

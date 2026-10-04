@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { TAG_KEYS } from './data/tags';
 
 const artigos = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/artigos' }),
@@ -14,7 +15,8 @@ const artigos = defineCollection({
     fonte: z.string().optional(),
     resumo: z.string().optional(),
     resumo_whatsapp: z.string().optional(),
-    tags: z.array(z.string()).optional(),
+    descricao: z.string().optional(),
+    tags: z.array(z.enum(TAG_KEYS)).min(3).max(6).optional(),
   }),
 });
 

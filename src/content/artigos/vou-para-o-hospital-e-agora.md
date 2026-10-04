@@ -6,8 +6,6 @@ tempo_leitura: "11 min"
 autor: "Dr. Fausto Azambuja"
 data: "2026-10-04"
 imagem_capa: "/img/01-mala-itens.png"
-tags: ["hospitalização", "internação", "altaHospitalar", "acompanhante", "delirium", "medicamentos", "prescrição", "receita", "cuidador"]
-resumo: "A internação pode tirar função do idoso, e boa parte disso dá para evitar. Veja o que levar, o que contar à equipe sobre como a pessoa era antes, o que observar no hospital e o que perguntar antes da alta."
 resumo_whatsapp: |
   📋 *Para levar com você*
 
@@ -20,6 +18,8 @@ resumo_whatsapp: |
   Guia em PDF com a ficha para levar ao hospital: https://cognisa.med.br/materiais/pdf/vou-para-o-hospital.pdf
 
   No artigo completo eu explico cada etapa, com a ficha pronta para imprimir:
+descricao: "Como preparar a internação de um idoso: o que levar, o que contar à equipe, como proteger a pessoa no hospital e o que perguntar na alta."
+tags: ["internação","altaHospitalar","acompanhante","delirium","prescrição","cuidador"]
 ---
 
 "Vamos precisar internar."
