@@ -13,9 +13,10 @@ interface Props {
   imagem_capa?: string;
   resumo?: string;
   resumoWhatsapp?: string;
+  tags?: string[];
 }
 
-const { slug, titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo, resumoWhatsapp } =
+const { slug, titulo, subtitulo, categoria, tempo_leitura, autor, data, imagem_capa, resumo, resumoWhatsapp, tags } =
   Astro.props;
 
 const dataFormatada = data
@@ -40,7 +41,8 @@ const breadcrumbs = [
   description={resumo}
   ogImage={imagem_capa || undefined}
   canonicalPath={`/artigos/${slug}/`}
-  articleMeta={{ headline: titulo, autor, datePublished: data || undefined }}
+  keywords={tags}
+  articleMeta={{ headline: titulo, autor, datePublished: data || undefined, keywords: tags }}
   breadcrumbs={breadcrumbs}
 >
   <article class="wrap artigo">
@@ -52,6 +54,13 @@ const breadcrumbs = [
       <a class="tag" href={catPath}>{categoria}</a>
       <h1 class="font-display">{titulo}</h1>
       {subtitulo && <p class="subtitulo">{subtitulo}</p>}
+      {tags && tags.length > 0 && (
+        <p class="hashtags">
+          {tags.map((tag) => (
+            <span>#{tag}</span>
+          ))}
+        </p>
+      )}
       <p class="meta">
         {autor} · {tempo_leitura} de leitura{dataFormatada ? ` · ${dataFormatada}` : ''}
       </p>
@@ -121,6 +130,17 @@ const breadcrumbs = [
     font-size: 1.05rem;
     max-width: 46ch;
     margin: 0 auto 14px;
+  }
+  .hashtags {
+    font-family: 'Karla', sans-serif;
+    color: var(--coral-deep);
+    font-size: 0.88rem;
+    max-width: 52ch;
+    margin: 0 auto 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 12px;
   }
   .meta {
     color: var(--clay);

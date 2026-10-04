@@ -3,6 +3,7 @@ interface ArticleMeta {
   headline: string;
   autor: string;
   datePublished?: string;
+  keywords?: string[];
 }
 
 interface Breadcrumb {
@@ -14,6 +15,7 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  keywords?: string[];
   showTelegram?: boolean;
   canonicalPath?: string;
   articleMeta?: ArticleMeta;
@@ -24,6 +26,7 @@ const {
   title,
   description = 'Um blog de bolso sobre envelhecer bem, escrito pelo Dr. Fausto Azambuja.',
   ogImage = '/img/logo.jpg',
+  keywords,
   showTelegram = false,
   canonicalPath = Astro.url.pathname,
   articleMeta,
@@ -56,6 +59,7 @@ const jsonLd = articleMeta
         },
       },
       ...(articleMeta.datePublished ? { datePublished: articleMeta.datePublished } : {}),
+      ...(articleMeta.keywords?.length ? { keywords: articleMeta.keywords.join(', ') } : {}),
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': canonicalURL.toString(),
@@ -86,6 +90,7 @@ const breadcrumbJsonLd =
     <link rel="icon" type="image/jpeg" href="/img/logo.jpg" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
     <link rel="canonical" href={canonicalURL} />
 
     <meta property="og:title" content={title} />
