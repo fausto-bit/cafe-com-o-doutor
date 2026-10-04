@@ -14,6 +14,8 @@ resumo_whatsapp: |
   - A decisão nunca deve se basear só na doença: pese capacidade funcional do idoso, capacidade real de quem cuida (saúde e tempo) e segurança da casa.
 
   No artigo completo eu conto por que, muitas vezes, institucionalizar não é abandono — é o caminho que devolve à família o papel de filho, não de cuidador exausto:
+descricao: "Como a família reconhece a hora de pensar em uma instituição de longa permanência: sinais de alerta, atividades do dia a dia, demência e a decisão em conjunto."
+tags: ["cuidador","funcionalidade","demência","sinaisDeAlerta"]
 ---
 
 A casa de um idoso é tecida por fios invisíveis de memória. É o cheiro do café na cozinha, a poltrona gasta onde décadas de histórias foram lidas, o silêncio familiar dos cômodos. Para muitas famílias, manter o idoso nesse ambiente é uma promessa de honra.

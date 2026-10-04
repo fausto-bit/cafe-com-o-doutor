@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - Antes de considerar sonda em fases avançadas, vale conversar com o médico sobre alimentação de conforto — as evidências mostram que a sonda não aumenta sobrevida nem evita pneumonia nessa fase.
 
   No artigo completo eu explico o "chin-tuck" — um gesto simples ao engolir que reduz bastante o risco de engasgo:
+descricao: "Como tornar a refeição mais fácil e segura para quem tem demência: ambiente, textura, comida reforçada, postura e a decisão sobre a sonda."
+tags: ["demência","alimentação","disfagia","cuidador"]
 ---
 
 Poucas coisas doem tanto num filho ou numa filha quanto ver o pai ou a mãe recusando comida. A gente aprendeu, a vida inteira, que comida é cuidado — e de repente aquele prato volta cheio, ou a pessoa engasga, ou some o interesse por tudo que antes era prazer.

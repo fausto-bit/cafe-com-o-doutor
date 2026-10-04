@@ -15,6 +15,8 @@ resumo_whatsapp: |
   - Leve, a cada consulta, uma lista atualizada com nome, dose, horário e frequência de tudo o que é tomado.
 
   No artigo completo eu explico a "cascata terapêutica" — o erro silencioso em que um remédio novo é prescrito para tratar o efeito colateral de outro:
+descricao: "Como organizar os remédios de um idoso em casa e evitar erros: por que o corpo muda a forma de lidar com eles, a cascata de remédios e um checklist simples."
+tags: ["medicamentos","polifarmácia","prevenção"]
 ---
 
 Você já parou para pensar que uma das causas mais comuns de internação de idosos não é uma doença nova — é o próprio tratamento?

@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - Dormir de lado parece favorecer esse sistema de limpeza, segundo estudos em modelos animais.
 
   No artigo completo eu explico o que é o sistema glinfático — a "equipe de limpeza" que só liga à noite, descoberta em 2012:
+descricao: "Durante o sono profundo, o cérebro faz uma limpeza de resíduos. Entenda o que a ciência descobriu e o que fazer na prática para dormir melhor."
+tags: ["sono","memória","prevenção"]
 ---
 
 Imagine que, toda noite, enquanto você desliga a mente para descansar, o seu cérebro chama uma equipe de limpeza urbana para o turno da madrugada. Não é força de expressão — é, literalmente, o que a ciência descobriu que acontece.

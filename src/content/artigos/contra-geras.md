@@ -9,6 +9,8 @@ resumo_whatsapp: |
   🧓 *Envelhecer bem não é só não estar doente — é resistir à fragilização com força, autonomia e propósito.*
 
   Inspirado no Congresso Mineiro de Geriatria e na mitologia grega (Geras, deus da velhice), o texto defende que cuidar bem do idoso vai além de tratar doenças e aplicar escalas: exige raciocínio clínico, atenção à polifarmácia e, principalmente, cuidar do músculo — um dos maiores patrimônios da velhice. Não podemos vencer Geras para sempre, mas podemos chegar até ele mais tarde, e mais fortes. Artigo completo:
+descricao: "Um olhar crítico sobre a geriatria do futuro: por que envelhecer bem é mais do que tratar doenças, e o papel do músculo, do exercício e de uma vida que valha a pena."
+tags: ["longevidade","envelhecimento","prevenção","força","exercício"]
 ---
 
 Ontem participei do Congresso Mineiro de Geriatria e assisti a uma palestra de um antigo professor. Foi uma daquelas palestras que continuam na cabeça mesmo depois que terminam.

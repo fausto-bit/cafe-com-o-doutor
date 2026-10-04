@@ -17,6 +17,8 @@ resumo_whatsapp: |
   - Se dois ou mais testes vierem alterados, ou já houve queda recente, converse com o médico antes de intensificar exercício por conta própria.
 
   No artigo completo eu conto sobre o estudo que treinou idosos de 87+ anos por dez semanas — e viu gente que entrou de andador sair andando sozinha:
+descricao: "Quatro hábitos para prevenir a perda de força depois dos 60: treino de força, caminhada, equilíbrio e proteína, com testes simples para fazer em casa."
+tags: ["força","sarcopenia","exercício","equilíbrio","nutrição"]
 ---
 
 Existe um estudo, hoje clássico, que treinou idosos de um asilo — média de 87 anos, alguns com mais de 90 — com treino de força por dez semanas. Resultado: a força das pernas quase dobrou. Gente que entrou usando andador saiu andando sozinha.

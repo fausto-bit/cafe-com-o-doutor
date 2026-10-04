@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - Antes da consulta, anote: quando começou, se foi gradual ou súbito, se mudou o sono ou o jeito de andar, se começou algum remédio novo recentemente.
 
   No artigo completo eu explico por que só 35% dos idosos chegam à velhice sem nenhum desses sintomas — e por que o verdadeiro teste do Alzheimer não está no exame de sangue, está na cozinha:
+descricao: "Como diferenciar um esquecimento comum de um sinal de alerta para o Alzheimer: o que observar na rotina, o que descartar e o que levar à consulta."
+tags: ["demência","memória","sinaisDeAlerta","funcionalidade","consulta"]
 ---
 
 Esquecer onde deixou as chaves, ou o nome de um conhecido num dia corrido, é um lapso humano comum. Existe, porém, uma linha invisível onde o esquecimento deixa de ser um tropeço e passa a ser um sinal de alerta. Essa linha não é cruzada pelo esquecimento em si — é cruzada quando a mesma história é contada pela décima vez na mesma tarde, ou quando alguém esquece que acabou de fazer uma refeição.

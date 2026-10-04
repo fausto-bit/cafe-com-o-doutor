@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - A base mais segura continua sendo o padrão mediterrâneo com sotaque brasileiro: feijão, verduras da estação, peixe acessível e azeite — sem precisar de "superalimentos" importados.
 
   No artigo completo eu explico como organizar café da manhã, almoço, lanche e jantar num dia possível — e quando vale conversar com o médico antes de mudar os horários:
+descricao: "Comer bem também envolve o horário: o que o relógio do corpo, a dieta mediterrânea e o intestino têm a ver com envelhecer bem, e como organizar um dia possível."
+tags: ["alimentação","nutrição","longevidade"]
 ---
 
 Durante muito tempo, falar de alimentação saudável parecia resumir-se a duas perguntas: **o que comer** e **quanto comer**.

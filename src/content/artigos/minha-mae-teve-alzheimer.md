@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - O que realmente ajuda: mover o corpo (força + aeróbico), cuidar do coração, comer bem, dormir bem, tratar audição e visão, continuar aprendendo e manter a vida social ativa.
 
   No artigo completo eu explico por que "minha mãe teve Alzheimer, e agora?" é a pergunta certa a se fazer — e o que a ciência mostra sobre cada um desses pontos:
+descricao: "Ter pai ou mãe com Alzheimer não decide o seu destino: o que a ciência mostra sobre exercício, comida, sono, audição, visão e vida social para proteger o cérebro."
+tags: ["demência","prevenção","memória","exercício","alimentação","sono"]
 ---
 
 Há uma consulta que se repete no meu consultório.

@@ -14,6 +14,8 @@ resumo_whatsapp: |
   - Já a decisão sobre sonda não tem resposta pronta — precisa ser conversada com calma, caso a caso, entre a família e o médico.
 
   No artigo completo eu explico por que a sonda não é uma resposta fácil, e o que ajuda de verdade na hora da comida:
+descricao: "Para famílias de quem tem demência avançada: sinais de dificuldade para engolir, o que fazer nas refeições e como pensar a decisão sobre a sonda."
+tags: ["disfagia","demência","alimentação","cuidador"]
 ---
 
 Chega um momento, na evolução do Alzheimer e de outras demências avançadas, em que o ato mais básico de comer — algo que fizemos sem pensar a vida inteira — se transforma em um desafio diário. O nome técnico é disfagia: dificuldade para engolir, seja por dor, engasgos frequentes, ou porque o alimento simplesmente não desce.

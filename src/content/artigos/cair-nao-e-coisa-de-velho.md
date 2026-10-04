@@ -15,6 +15,8 @@ resumo_whatsapp: |
   - Se o idoso já caiu no último ano, ou anda tropeçando, vale levar isso para a próxima consulta — antes que vire fratura.
 
   No artigo completo eu explico por que "queda mecânica" é uma expressão que prefiro evitar, e o que o geriatra avalia numa consulta sobre esse assunto:
+descricao: "Queda em idoso não é \"coisa da idade\": o que fazer para reduzir o risco, do movimento e da casa segura à revisão de remédios, visão e calçado."
+tags: ["quedas","prevenção","equilíbrio","exercício","fragilidade"]
 ---
 
 Existe uma frase que eu escuto com frequência no consultório, e que eu gostaria de aposentar: "ah, doutor, ele caiu, mas já é de idade mesmo, essas coisas acontecem."

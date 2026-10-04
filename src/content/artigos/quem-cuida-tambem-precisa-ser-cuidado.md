@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - Conte ao médico como você está, não só como está o paciente — "estou dormindo pouco" ou "não tenho com quem revezar" ajudam a equipe a ajudar de verdade.
 
   No artigo completo eu trago um jeito prático de transformar "preciso de ajuda" num pedido concreto — e quando procurar avaliação para você mesmo:
+descricao: "Sinais de que a sobrecarga de quem cuida passou do ponto, como dividir tarefas, incluir descanso na rotina e levar a própria situação à consulta."
+tags: ["cuidador","prevenção","consulta"]
 ---
 
 Há quem acompanhe consultas, organize remédios, resolva imprevistos, ajude no banho e ainda tente manter o trabalho e a própria casa funcionando. Muitas vezes, essa pessoa responde "está tudo bem" quando alguém pergunta como ela está. Nem sempre está.

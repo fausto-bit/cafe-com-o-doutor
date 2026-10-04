@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - Perda de peso, roupas ficando largas, cansaço para mastigar ou medo excessivo de sal/açúcar/gordura merecem atenção — às vezes a prioridade não é restringir mais, é recuperar força e prazer em comer.
 
   No artigo completo eu explico como montar um prato possível pra vida brasileira, com só 4 perguntas simples:
+descricao: "Depois dos 60, comer pouco nem sempre é comer bem: por que proteína e padrões como a dieta mediterrânea protegem músculos, cérebro e autonomia."
+tags: ["alimentação","nutrição","sarcopenia","funcionalidade"]
 ---
 
 ![Cenas de colheita e cozinha em três momentos do dia — manhã, noite e entardecer, com uma mesa posta ao final.](/img/hero-colheita-e-cozinha.png)

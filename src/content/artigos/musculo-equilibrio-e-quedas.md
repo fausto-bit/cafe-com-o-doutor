@@ -15,6 +15,8 @@ resumo_whatsapp: |
   - O que mais ajuda: treino de força progressivo (caminhada sozinha não basta), equilíbrio treinado de forma específica, revisão de medicamentos, casa adaptada e, depois de fratura ou internação, reabilitação como parte explícita do tratamento — não algo "para depois".
 
   No artigo completo eu explico os testes simples que ajudam a enxergar a perda de força antes da queda, e por que vitamina D não é uma vacina contra quedas:
+descricao: "Guia completo sobre músculo, equilíbrio e quedas depois dos 60: perceber a perda de força, treinar com segurança, proteger os ossos e recuperar-se após internação."
+tags: ["quedas","força","equilíbrio","sarcopenia","osteoporose","exercício"]
 ---
 
 Há uma cena que se repete no consultório: a pessoa diz que está "mais devagar", que agora usa os braços para se levantar da cadeira, que deixou de subir escadas ou que quase caiu no banheiro. Como nada quebrou e ela ainda consegue andar, todos respiram aliviados.

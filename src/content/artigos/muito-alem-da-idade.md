@@ -16,6 +16,8 @@ resumo_whatsapp: |
   - O cuidado certo muda conforme a reserva funcional: prevenção agressiva no idoso robusto, conforto e dignidade no idoso com doença avançada.
 
   No artigo completo eu explico os 5 estágios pelos quais uma doença não tratada evolui — e por que a dependência não é destino, é o que se previne:
+descricao: "O que significa envelhecer bem: a diferença entre envelhecer e adoecer, autonomia e independência, e como a geriatria ajuda nessa jornada."
+tags: ["envelhecimento","longevidade","funcionalidade","fragilidade","medicamentos"]
 ---
 
 Quase todo mundo aceita a dependência e a fragilidade como um destino inevitável do tempo. E quase todo mundo está errado.

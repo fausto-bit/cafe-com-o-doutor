@@ -18,6 +18,8 @@ resumo_whatsapp: |
   ⚠️ Nenhum medicamento deve ser interrompido por conta própria.
 
   No artigo completo eu explico como se preparar para uma revisão de medicamentos e por que menos só é melhor quando continua sendo suficiente:
+descricao: "Quando muitos remédios fazem mal: como tontura, sonolência, confusão e quedas podem vir do tratamento, o que é desprescrever e como se preparar para uma revisão."
+tags: ["medicamentos","polifarmácia","prescrição","quedas"]
 ---
 
 ![Pessoa idosa observa diversos medicamentos conectados por uma linha contínua, com uma cápsula em destaque.](/img/01-receita-que-cresceu.png)

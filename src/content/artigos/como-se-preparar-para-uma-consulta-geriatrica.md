@@ -15,6 +15,8 @@ resumo_whatsapp: |
   - Leve óculos, aparelho auditivo e bengala ou andador de uso habitual, e escolha com antecedência duas ou três prioridades para conversar primeiro.
 
   No artigo completo eu explico quando vale a pena ir acompanhado e o que o geriatra costuma perguntar além do motivo da consulta:
+descricao: "Como se preparar para a consulta com o geriatra: o que levar, o que anotar, quando ir acompanhado e um checklist simples para o paciente e a família."
+tags: ["consulta","medicamentos","acompanhante"]
 ---
 
 Uma consulta geriátrica começa antes de entrar no consultório.

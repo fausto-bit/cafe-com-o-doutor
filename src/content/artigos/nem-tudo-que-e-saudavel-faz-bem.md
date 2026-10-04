@@ -15,6 +15,8 @@ resumo_whatsapp: |
   - Uma meta de glicemia perfeita demais pode causar mais hipoglicemia do que benefício em idosos frágeis — a meta certa depende da pessoa, não de um número igual para todos.
 
   No artigo completo eu explico como perceber quando um cuidado saiu da medida — e uma pergunta simples para levar pra casa:
+descricao: "Quando o cuidado passa da medida: como a família percebe que uma dieta, uma proibição ou um remédio a mais tiram a alegria de viver do idoso."
+tags: ["cuidador","prevenção","funcionalidade","alimentação","medicamentos"]
 ---
 
 Toda família que cuida de um idoso já passou por isso: uma recomendação de saúde que, na teoria, é perfeita — e que, na prática, tira a alegria de viver.
