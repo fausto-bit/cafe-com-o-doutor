@@ -31,6 +31,13 @@ const temas = temasEmUso(artigos);
     <path d="M2 16 Q 15 0, 30 8 T 58 8 T 86 8 T 114 8" />
   </svg>
 
+  <section class="cardapio wrap" id="cardapio">
+    <h2 class="font-display">Hoje no cardápio</h2>
+    <ul class="menu">
+      {artigos.map((artigo) => <ArtigoItem artigo={artigo} showCategoria={true} />)}
+    </ul>
+  </section>
+
   {temas.length > 0 && (
     <section class="assuntos wrap" aria-labelledby="assuntos-titulo">
       <h2 id="assuntos-titulo" class="font-display">Assuntos</h2>
@@ -45,13 +52,6 @@ const temas = temasEmUso(artigos);
       </ul>
     </section>
   )}
-
-  <section class="cardapio wrap" id="cardapio">
-    <h2 class="font-display">Hoje no cardápio</h2>
-    <ul class="menu">
-      {artigos.map((artigo) => <ArtigoItem artigo={artigo} showCategoria={true} />)}
-    </ul>
-  </section>
 
   <section class="sobre wrap" id="sobre">
     <h2 class="font-display">Sobre este espaço</h2>
@@ -102,12 +102,13 @@ const temas = temasEmUso(artigos);
   }
 
   .assuntos {
-    padding-top: 32px;
+    padding-top: 8px;
+    padding-bottom: 48px;
   }
   .assuntos > h2 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-style: italic;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .assuntos-lista {
     list-style: none;
@@ -154,7 +155,7 @@ const temas = temasEmUso(artigos);
 
   .cardapio {
     padding-top: 40px;
-    padding-bottom: 56px;
+    padding-bottom: 48px;
   }
   .cardapio > h2 {
     font-size: 1.8rem;
