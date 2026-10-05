@@ -121,7 +121,7 @@ Isso pode confundir a família: *"Como está constipado se está fazendo líquid
 
 Nem todo escape líquido tem essa causa. É preciso avaliar. Não trate automaticamente com remédio para prender o intestino e não tente retirar fezes manualmente em casa.
 
-A constipação importante também pode tirar o apetite, causar náuseas, dificultar a saída da urina e piorar o escape de urina. É mais uma razão para não ignorar o intestino quando a bexiga vai mal (veja *Chegar a tempo*).
+A constipação importante também pode tirar o apetite, causar náuseas, dificultar a saída da urina e piorar o escape de urina. É mais uma razão para não ignorar o intestino quando a bexiga vai mal (veja *[Chegar a tempo](/artigos/chegar-a-tempo/)*).
 
 Em quem tem demência, observe também mudanças de comportamento que possam indicar dor ou desconforto. Confusão nova precisa de avaliação; não deve ser atribuída automaticamente ao intestino.
 
