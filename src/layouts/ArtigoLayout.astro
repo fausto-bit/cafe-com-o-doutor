@@ -261,6 +261,20 @@ const breadcrumbs = [
     font-weight: 600;
     white-space: nowrap;
   }
+  @media (max-width: 640px) {
+    .prose table {
+      display: block;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    .prose th,
+    .prose td {
+      padding: 8px 8px;
+    }
+    .prose td:first-child {
+      white-space: normal;
+    }
+  }
   .prose p > img {
     border-radius: 14px;
     margin: 0 auto;
