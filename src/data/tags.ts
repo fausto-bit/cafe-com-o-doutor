@@ -22,6 +22,7 @@ export const TEMAS = {
   alimentação: { rotulo: 'Alimentação', frase: 'Artigos sobre o que, quando e como comer ao longo da vida.' },
   nutrição: { rotulo: 'Nutrição', frase: 'Artigos sobre nutrientes, proteína e o que o corpo precisa para se manter forte.' },
   disfagia: { rotulo: 'Engasgo e dificuldade de engolir', frase: 'Artigos sobre dificuldade para engolir e engasgos, e como tornar a refeição mais segura.' },
+  constipação: { rotulo: 'Intestino e constipação', frase: 'Artigos sobre prisão de ventre, laxantes e o funcionamento do intestino na pessoa idosa.' },
   pele: { rotulo: 'Pele', frase: 'Artigos sobre os cuidados com a pele de quem envelhece.' },
   medicamentos: { rotulo: 'Medicamentos', frase: 'Artigos sobre o uso seguro de medicamentos na velhice.' },
   polifarmácia: { rotulo: 'Muitos remédios', frase: 'Artigos sobre o uso de muitos remédios ao mesmo tempo e quando vale revisá-los.' },
