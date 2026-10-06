@@ -54,7 +54,7 @@ Antes de concluir que é "da demência", observe: a pessoa pode estar com **dor*
 
 **Óculos e aparelho auditivo** também contam. Quem não enxerga ou não escuta bem entende o mundo como uma sucessão de sombras e vozes sem sentido. Confira se estão limpos, funcionando e sendo usados.
 
-Uma televisão alta e várias conversas ao mesmo tempo podem tornar o ambiente difícil de acompanhar. Mudanças de casa, de cuidador ou de rotina também merecem atenção. E, se a inquietação piora no fim da tarde, leia o artigo sobre a síndrome do entardecer, nesta série.
+Uma televisão alta e várias conversas ao mesmo tempo podem tornar o ambiente difícil de acompanhar. Mudanças de casa, de cuidador ou de rotina também merecem atenção. E, se a inquietação piora no fim da tarde, leia o [artigo sobre a síndrome do entardecer](/artigos/quando-o-sol-baixa/), nesta série.
 
 A investigação não é uma prova que a família precisa resolver sozinha. São pistas para compartilhar com a equipe.
 
