@@ -8,6 +8,7 @@ export interface Tema {
 }
 
 export const TEMAS = {
+  agitação: { rotulo: 'Agitação e comportamento', frase: 'Artigos sobre agitação, inquietação e mudanças de comportamento na pessoa com demência.' },
   quedas: { rotulo: 'Quedas', frase: 'Artigos sobre como entender e prevenir as quedas na velhice.' },
   equilíbrio: { rotulo: 'Equilíbrio', frase: 'Artigos sobre equilíbrio, firmeza ao andar e segurança para se movimentar.' },
   força: { rotulo: 'Força muscular', frase: 'Artigos sobre manter e recuperar a força dos músculos com o passar dos anos.' },

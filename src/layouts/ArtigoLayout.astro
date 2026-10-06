@@ -237,6 +237,40 @@ const breadcrumbs = [
   .prose .glance .g-192 { background: var(--coral-deep); color: #fff; }
   .prose .glance .g-hoje { background: var(--clay); color: #fff; }
   .prose .glance .g-dias { background: var(--ink); color: var(--paper); }
+  .prose .cta-download {
+    margin: 36px 0;
+    padding: 20px 24px 22px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--coral);
+    border-radius: 0 12px 12px 0;
+    text-align: center;
+  }
+  .prose .cta-download p {
+    margin: 10px 0;
+  }
+  .prose .cta-download p:has(> img:only-child) {
+    margin: 0 0 6px;
+  }
+  .prose .cta-download img {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .prose .cta-download a {
+    display: inline-block;
+    background: var(--coral-deep);
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 100px;
+  }
+  .prose .cta-download a:hover {
+    background: var(--ink);
+  }
   .prose table {
     width: 100%;
     border-collapse: collapse;
