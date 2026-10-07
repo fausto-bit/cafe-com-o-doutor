@@ -167,7 +167,7 @@ Observe o desconforto, proteja a segurança e compartilhe o que percebeu. Às ve
 
 ### Fontes e leitura adicional
 
-- NICE. [Dementia: assessment, management and support for people living with dementia and their carers (NG97)](https://www.nice.org.uk/guidance/ng97): recomendações 1.7 e 1.8.
+- NICE. [Dementia: assessment, management and support for people living with dementia and their carers (NG97)](https://www.nice.org.uk/guidance/ng97): recomendações 1.4 e 1.5.
 - NICE. [Delirium: prevention, diagnosis and management (CG103)](https://www.nice.org.uk/guidance/cg103).
 - Husebo BS et al. [Efficacy of treating pain to reduce behavioural disturbances in residents of nursing homes with dementia: cluster randomised clinical trial](https://doi.org/10.1136/bmj.d4065). *BMJ* 2011;343:d4065.
 - Alzheimer's Association. [Anxiety & Agitation](https://www.alz.org/help-support/caregiving/stages-behaviors/anxiety-agitation).
