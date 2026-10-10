@@ -322,23 +322,51 @@ const breadcrumbs = [
   }
 
   /* Bloco de assinatura final — sempre a última seção do artigo */
+  .prose { --sangria: 28px; }
+  @media (max-width: 640px) { .prose { --sangria: 24px; } }
   .prose h2:last-of-type {
     border-top: 1px solid var(--line);
     border-bottom: none;
     background: var(--card);
-    padding: 28px 28px 4px;
-    margin-left: -28px;
-    margin-right: -28px;
+    padding: 28px var(--sangria) 4px;
+    margin-left: calc(-1 * var(--sangria));
+    margin-right: calc(-1 * var(--sangria));
     margin-top: 56px;
     border-radius: 16px 16px 0 0;
     font-style: italic;
   }
   .prose h2:last-of-type ~ * {
     background: var(--card);
-    padding-left: 28px;
-    padding-right: 28px;
-    margin-left: -28px;
-    margin-right: -28px;
+    padding-left: var(--sangria);
+    padding-right: var(--sangria);
+    margin-left: calc(-1 * var(--sangria));
+    margin-right: calc(-1 * var(--sangria));
+    /* o espaço entre blocos vira padding, para o fundo do cartão ficar contínuo */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  .prose h2:last-of-type ~ p:has(> img:only-child) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .prose h2:last-of-type ~ p:has(> em:only-child) {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+  .prose h2:last-of-type ~ p:has(> em:only-child):not(:last-child) {
+    padding-bottom: 1em;
+  }
+  .prose h2:last-of-type ~ hr {
+    border: 0;
+    height: 1px;
+    box-sizing: content-box;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    background:
+      linear-gradient(var(--line), var(--line)) center / calc(100% - 2 * var(--sangria)) 1px no-repeat,
+      var(--card);
   }
   .prose h2:last-of-type ~ *:last-child {
     border-bottom: 1px solid var(--line);
