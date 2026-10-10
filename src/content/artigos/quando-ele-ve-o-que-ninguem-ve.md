@@ -90,27 +90,27 @@ Tratar a causa muitas vezes faz o delírio desaparecer. Por isso, **o primeiro p
 | "Eu sou sua filha! Não me conhece?" | "Oi, mãe, sou eu, a Ana. Vim te ver." |
 | Discutir até convencer | Acolher o sentimento e mudar de assunto: um café, uma música, uma fotografia |
 
-Quatro princípios resumem tudo: **valide o sentimento, não o fato; nunca discuta; distraia depois; fale baixo e em frases curtas.** Você não precisa inventar histórias nem concordar com a crença. Dá para ser verdadeiro sobre a emoção sem confirmar o delírio.
+Quatro princípios resumem tudo: **valide o sentimento, não o fato; nunca discuta; distraia depois; fale baixo e em frases curtas.** Você não precisa inventar histórias nem concordar com a crença. Dá para ser verdadeiro sobre a emoção sem confirmar o delírio: reconheça o medo sem afirmar que houve um roubo ou que existe um invasor.
 
 ## Alucinações: nem toda precisa de tratamento
 
 A pergunta-chave é uma só: **isso incomoda?** Se a pessoa vê uma criança sorridente no canto da sala e fica tranquila, não há pressa em "tratar". Observe e anote. Se há medo, agitação ou risco, é hora de agir.
 
-- **Cheque se é ilusão.** Casaco no cabide na penumbra, sombra na parede, reflexo no espelho, no vidro ou na TV desligada. Luz boa, cortinas fechadas ao anoitecer e um pano sobre o espelho resolvem muito.
+- **Cheque se é ilusão.** Casaco no cabide na penumbra, sombra na parede, reflexo no espelho, no vidro ou na TV desligada. Luz boa, cortinas fechadas ao anoitecer e um pano sobre o espelho podem reduzir bastante o desconforto.
 - **Óculos e aparelho de audição** em dia fazem diferença maior do que parece.
 - **Luz de tomada ou abajur** no quarto e no corredor, à noite.
 - **Televisão:** noticiário e filmes violentos podem virar "realidade". Prefira programas calmos.
 - **Se há medo,** não diga "não tem ninguém aí". Diga "estou com você, vamos acender a luz e olhar juntos", e olhe de verdade, com calma.
 
 ![Sala aconchegante com abajur aceso, cortinas fechadas, espelho coberto por um pano e um casaco no cabideiro.](/img/delirios-04-luz-espelho.webp)
-*Boa luz, cortinas fechadas ao anoitecer e um pano sobre o espelho resolvem muito.*
+*Boa luz, cortinas fechadas ao anoitecer e um pano sobre o espelho podem reduzir bastante o desconforto.*
 
 **Um alerta para levar ao médico:** figuras bem formadas (pessoas, animais) que aparecem cedo, oscilação importante da atenção ao longo do dia, sonolência diurna e noites em que a pessoa "age" os sonhos, gritando ou se debatendo, podem indicar demência com corpos de Lewy. Isso muda a escolha dos remédios, e é por isso que vale contar.
 
 ## Segurança em casa
 
 - **Armas e facas:** se há arma de fogo em casa, ela precisa sair. Facas e objetos cortantes ficam guardados.
-- **Portas:** quem quer "ir para casa" ou fugir de um "invasor" pode sair sozinho. Fechaduras fora do alcance dos olhos, ou campainha na porta, ajudam.
+- **Portas:** quem quer "ir para casa" ou fugir de um "invasor" pode sair sozinho. Fechaduras fora do alcance dos olhos, ou campainha na porta, ajudam. Qualquer adaptação precisa permitir a saída rápida em caso de incêndio ou outra emergência e não pode impedir o acesso de quem vai socorrer.
 - **Se houver ameaça,** não enfrente. Afaste-se, saia do cômodo, peça ajuda.
 - **Quem trabalha em casa** pode virar alvo das acusações. Converse com a pessoa e explique que não é pessoal.
 - **Emergência:** SAMU 192 ou ambulância particular: ______________________.
@@ -120,7 +120,7 @@ A pergunta-chave é uma só: **isso incomoda?** Se a pessoa vê uma criança sor
 
 ## E o remédio?
 
-Remédio é o último recurso, nunca o primeiro. Antes dele vêm a investigação das causas e as medidas acima.
+Primeiro, investigamos as causas e adaptamos o cuidado. Quando há sofrimento intenso ou risco para a pessoa ou para os outros, o médico pode indicar medicação, sem abandonar as outras medidas.
 
 - **Antipsicóticos** (Risperdal/risperidona, Seroquel/quetiapina, Haldol/haloperidol) só entram quando há sofrimento intenso ou risco para a pessoa ou para os outros. A regra é a menor dose pelo menor tempo, com reavaliação regular e tentativa de retirada assim que possível. As agências reguladoras alertam que esses remédios aumentam, em pessoas com demência, o risco de AVC, de quedas e de morte.
 - **Cuidado com o que sobrou na gaveta.** Na demência com corpos de Lewy e na doença de Parkinson, alguns antipsicóticos, especialmente o haloperidol, podem causar reações graves. Nunca dê remédio sem receita atual.
