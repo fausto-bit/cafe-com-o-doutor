@@ -1,8 +1,14 @@
 {
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "cafecomodoutor.com.br" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "cafecomodoutor.com.br"
+        }
+      ],
       "destination": "https://www.cafecomodoutor.com.br/:path*",
       "permanent": true
     }
