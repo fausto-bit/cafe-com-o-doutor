@@ -10,13 +10,19 @@ const artigos = (await getCollection('artigos')).sort((a, b) =>
 const temas = temasEmUso(artigos);
 ---
 
-<BaseLayout title="Café com o Doutor — um blog de bolso sobre envelhecer bem" showTelegram={true} canonicalPath="/">
+<BaseLayout
+  title="Café com o Doutor | Geriatria e Slow Medicine em Belo Horizonte"
+  description="Ensaios e guias práticos do Dr. Fausto Azambuja, geriatra e clínico em Belo Horizonte. Slow Medicine com alta tecnologia: tempo para ouvir, ciência para decidir."
+  showTelegram={true}
+  canonicalPath="/"
+>
   <section class="hero wrap">
-    <p class="eyebrow">um blog de bolso sobre envelhecer bem</p>
+    <p class="eyebrow">Geriatria e Clínica Médica · Slow Medicine + alta tecnologia · Belo Horizonte</p>
     <h1 class="font-display">Café com o Doutor</h1>
     <p class="subtext">
-      Ensaios e guias práticos do Dr. Fausto Azambuja sobre longevidade, cérebro e família —
-      escritos como uma conversa, não como uma bula.
+      Ensaios e guias práticos do Dr. Fausto Azambuja sobre envelhecer com autonomia: tempo para
+      entender cada pessoa, tecnologia e evidência para cuidar bem. Escritos como uma conversa,
+      não como uma bula.
     </p>
     <div class="hero-ctas">
       {artigos[0] && (
@@ -56,9 +62,12 @@ const temas = temasEmUso(artigos);
   <section class="sobre wrap" id="sobre">
     <h2 class="font-display">Sobre este espaço</h2>
     <p>
-      Sou o Dr. Fausto Azambuja, médico geriatra em Belo Horizonte. O Café com o Doutor nasceu
-      para falar de envelhecer bem além do consultório — músculo tanto quanto medicamento,
-      prevenção tanto quanto diagnóstico, propósito tanto quanto exame.
+      Sou o Dr. Fausto Azambuja, geriatra e clínico em Belo Horizonte. Pratico Slow Medicine com
+      alta tecnologia: consultas sem pressa, em que o tempo serve para ouvir a história de cada
+      pessoa, e ferramentas modernas (avaliação funcional estruturada, revisão criteriosa de
+      medicamentos, acompanhamento contínuo) para decidir com precisão. O Café com o Doutor leva
+      essa conversa para além do consultório: músculo tanto quanto medicamento, prevenção tanto
+      quanto diagnóstico, propósito tanto quanto exame.
     </p>
     <p><a href="/sobre/">Conheça mais sobre o autor →</a></p>
   </section>
