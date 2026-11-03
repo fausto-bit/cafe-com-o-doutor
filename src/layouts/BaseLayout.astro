@@ -20,6 +20,7 @@ interface Props {
   canonicalPath?: string;
   articleMeta?: ArticleMeta;
   breadcrumbs?: Breadcrumb[];
+  noindex?: boolean;
 }
 
 const {
@@ -31,6 +32,7 @@ const {
   canonicalPath = Astro.url.pathname,
   articleMeta,
   breadcrumbs,
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(canonicalPath, Astro.site);
@@ -94,6 +96,7 @@ const breadcrumbJsonLd =
     <title>{title}</title>
     <meta name="description" content={description} />
     {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalURL} />
 
     <meta property="og:title" content={title} />
@@ -124,6 +127,10 @@ const breadcrumbJsonLd =
           <span class="brand-word">Café com o Doutor</span>
         </a>
         <nav class="nav-links">
+          <a href="/busca/" class="nav-busca" aria-label="Buscar nos ensaios">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+            Buscar
+          </a>
           <a href="/sobre/">Sobre</a>
         </nav>
       </div>
@@ -285,6 +292,11 @@ const breadcrumbJsonLd =
   }
   .nav-links a {
     text-decoration: none;
+  }
+  .nav-busca {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
   .nav-links a:not(.btn):hover {
     color: var(--coral);

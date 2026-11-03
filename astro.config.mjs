@@ -4,7 +4,7 @@ import { remarkAlertBlockquote } from './src/lib/remark-alert-blockquote.mjs';
 
 export default defineConfig({
   site: 'https://www.cafecomodoutor.com.br',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/busca') })],
   markdown: {
     remarkPlugins: [remarkAlertBlockquote],
   },

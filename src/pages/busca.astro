@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Buscar nos ensaios — Café com o Doutor"
+  description="Procure um assunto nos ensaios do Café com o Doutor."
+  noindex={true}
+>
+  <section class="busca-page wrap">
+    <h1 class="font-display">Buscar nos ensaios</h1>
+    <p class="busca-ajuda">Escreva uma palavra ou duas. Não precisa acertar a grafia nem usar acento.</p>
+
+    <form class="busca-form" role="search" id="busca-form">
+      <input
+        id="busca-input"
+        type="search"
+        name="q"
+        placeholder="Ex.: queda, remédio, memória, sono…"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+        aria-label="Buscar nos ensaios"
+      />
+      <button type="submit" class="btn btn-pill btn-coral">Buscar</button>
+    </form>
+
+    <p class="busca-status" id="busca-status" aria-live="polite"></p>
+    <ul class="menu" id="busca-resultados"></ul>
+  </section>
+</BaseLayout>
+
+<script>
+  import MiniSearch from 'minisearch';
+
+  type Registro = {
+    id: string;
+    titulo: string;
+    subtitulo: string;
+    categoria: string;
+    tempo: string;
+    data: string;
+    descricao: string;
+    temas: string;
+    corpo: string;
+  };
+
+  const STOP = new Set(
+    'a o as os um uma uns umas de do da dos das em no na nos nas por para com sem e ou que se ao aos como mais mas ja eu me meu minha seu sua ele ela eles elas isso esse essa este esta ser ter foi sao tem'.split(' '),
+  );
+
+  const normaliza = (s: string) =>
+    s
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .toLowerCase();
+
+  // Tolerância a erro de digitação proporcional ao tamanho da palavra.
+  const tolerancia = (termo: string) => (termo.length <= 3 ? 0 : termo.length <= 5 ? 1 : 2);
+
+  const processTerm = (termo: string) => {
+    const t = normaliza(termo);
+    return STOP.has(t) ? null : t;
+  };
+
+  const form = document.getElementById('busca-form') as HTMLFormElement;
+  const input = document.getElementById('busca-input') as HTMLInputElement;
+  const status = document.getElementById('busca-status') as HTMLElement;
+  const lista = document.getElementById('busca-resultados') as HTMLUListElement;
+
+  let motor: MiniSearch<Registro> | null = null;
+  let porId = new Map<string, Registro>();
+  let carregando: Promise<void> | null = null;
+
+  function carregar(): Promise<void> {
+    if (carregando) return carregando;
+    carregando = fetch('/busca-index.json')
+      .then((r) => r.json())
+      .then((dados: Registro[]) => {
+        porId = new Map(dados.map((d) => [d.id, d]));
+        motor = new MiniSearch<Registro>({
+          fields: ['titulo', 'subtitulo', 'temas', 'categoria', 'descricao', 'corpo'],
+          storeFields: [],
+          processTerm,
+          searchOptions: {
+            boost: { titulo: 6, temas: 4, subtitulo: 3, categoria: 2, descricao: 2 },
+            prefix: true,
+            fuzzy: tolerancia,
+          },
+        });
+        motor.addAll(dados);
+      });
+    return carregando;
+  }
+
+  function trecho(r: Registro, consulta: string): string {
+    const termos = consulta
+      .split(/\s+/)
+      .map(normaliza)
+      .filter((t) => t.length > 2 && !STOP.has(t));
+    const corpoNorm = normaliza(r.corpo);
+    for (const t of termos) {
+      const i = corpoNorm.indexOf(t);
+      if (i >= 0) {
+        const ini = Math.max(0, i - 70);
+        const fim = Math.min(r.corpo.length, i + 110);
+        return (ini > 0 ? '…' : '') + r.corpo.slice(ini, fim).trim() + (fim < r.corpo.length ? '…' : '');
+      }
+    }
+    return r.descricao;
+  }
+
+  function desenhar(ids: string[], consulta: string) {
+    lista.replaceChildren();
+    for (const id of ids) {
+      const r = porId.get(id);
+      if (!r) continue;
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `/artigos/${r.id}/`;
+      a.className = 'menu-item';
+      const texto = document.createElement('div');
+      texto.className = 'menu-item-text';
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.textContent = r.categoria;
+      const h3 = document.createElement('h3');
+      h3.className = 'font-display';
+      h3.textContent = r.titulo;
+      const p = document.createElement('p');
+      p.className = 'busca-trecho';
+      p.textContent = trecho(r, consulta);
+      texto.append(tag, h3, p);
+      const tempo = document.createElement('span');
+      tempo.className = 'menu-time';
+      tempo.textContent = r.tempo;
+      a.append(texto, tempo);
+      li.append(a);
+      lista.append(li);
+    }
+  }
+
+  async function buscar(consulta: string) {
+    const q = consulta.trim();
+    if (!q) {
+      lista.replaceChildren();
+      status.textContent = '';
+      return;
+    }
+    status.textContent = 'Buscando…';
+    try {
+      await carregar();
+    } catch {
+      status.textContent = 'Não consegui carregar a busca agora. Tente de novo em instantes.';
+      return;
+    }
+    if (input.value.trim() !== q) return; // a pessoa já digitou outra coisa
+    // Todas as palavras; se nada vier, qualquer uma delas.
+    let achados = motor!.search(q, { combineWith: 'AND' });
+    if (achados.length === 0) achados = motor!.search(q, { combineWith: 'OR' });
+    desenhar(
+      achados.map((x) => String(x.id)),
+      q,
+    );
+    status.textContent =
+      achados.length === 0
+        ? 'Nada encontrado. Tente outra palavra ou uma parte dela.'
+        : `${achados.length} ${achados.length === 1 ? 'ensaio encontrado' : 'ensaios encontrados'}`;
+  }
+
+  let espera: number | undefined;
+  input.addEventListener('input', () => {
+    clearTimeout(espera);
+    espera = window.setTimeout(() => {
+      buscar(input.value);
+      const url = new URL(location.href);
+      if (input.value.trim()) url.searchParams.set('q', input.value.trim());
+      else url.searchParams.delete('q');
+      history.replaceState(null, '', url);
+    }, 180);
+  });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    buscar(input.value);
+    input.blur();
+  });
+
+  const inicial = new URLSearchParams(location.search).get('q');
+  if (inicial) {
+    input.value = inicial;
+    buscar(inicial);
+  } else {
+    input.focus();
+    carregar().catch(() => {});
+  }
+</script>
+
+<style is:global>
+  .busca-page {
+    padding: 40px 24px 56px;
+  }
+  .busca-page h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .busca-ajuda {
+    color: var(--clay);
+    margin: 0 0 20px;
+  }
+  .busca-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .busca-form input {
+    flex: 1;
+    min-width: 0;
+    font: inherit;
+    font-size: 1.05rem;
+    color: var(--ink);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 12px 20px;
+  }
+  .busca-form input:focus {
+    outline: none;
+    border-color: var(--coral);
+  }
+  .busca-status {
+    color: var(--clay);
+    font-size: 0.9rem;
+    min-height: 1.4em;
+    margin: 0 0 14px;
+  }
+  .busca-trecho {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--clay);
+    line-height: 1.5;
+  }
+</style>
