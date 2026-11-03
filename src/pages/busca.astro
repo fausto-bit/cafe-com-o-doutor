@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SINONIMOS } from '../data/sinonimos';
 ---
 
 <BaseLayout
@@ -28,10 +29,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="busca-status" id="busca-status" aria-live="polite"></p>
     <ul class="menu" id="busca-resultados"></ul>
   </section>
+  <script type="application/json" id="busca-sinonimos" set:html={JSON.stringify(SINONIMOS)} />
 </BaseLayout>
 
 <script>
   import MiniSearch from 'minisearch';
+  import { STOP, normaliza, fonetiza, tolerancia, prepararGatilhos, montarConsulta, semCauda } from '../lib/busca';
 
   type Registro = {
     id: string;
@@ -45,22 +48,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     corpo: string;
   };
 
-  const STOP = new Set(
-    'a o as os um uma uns umas de do da dos das em no na nos nas por para com sem e ou que se ao aos como mais mas ja eu me meu minha seu sua ele ela eles elas isso esse essa este esta ser ter foi sao tem'.split(' '),
+  const gatilhos = prepararGatilhos(
+    JSON.parse(document.getElementById('busca-sinonimos')!.textContent ?? '[]'),
   );
-
-  const normaliza = (s: string) =>
-    s
-      .normalize('NFD')
-      .replace(/[̀-ͯ]/g, '')
-      .toLowerCase();
-
-  // Tolerância a erro de digitação proporcional ao tamanho da palavra.
-  const tolerancia = (termo: string) => (termo.length <= 3 ? 0 : termo.length <= 5 ? 1 : 2);
 
   const processTerm = (termo: string) => {
     const t = normaliza(termo);
-    return STOP.has(t) ? null : t;
+    return STOP.has(t) ? null : fonetiza(t);
   };
 
   const form = document.getElementById('busca-form') as HTMLFormElement;
@@ -84,7 +78,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           processTerm,
           searchOptions: {
             boost: { titulo: 6, temas: 4, subtitulo: 3, categoria: 2, descricao: 2 },
-            prefix: true,
+            prefix: (termo: string) => termo.length >= 4,
             fuzzy: tolerancia,
           },
         });
@@ -93,26 +87,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     return carregando;
   }
 
-  function trecho(r: Registro, consulta: string): string {
-    const termos = consulta
-      .split(/\s+/)
-      .map(normaliza)
-      .filter((t) => t.length > 2 && !STOP.has(t));
-    const corpoNorm = normaliza(r.corpo);
-    for (const t of termos) {
-      const i = corpoNorm.indexOf(t);
-      if (i >= 0) {
-        const ini = Math.max(0, i - 70);
-        const fim = Math.min(r.corpo.length, i + 110);
-        return (ini > 0 ? '…' : '') + r.corpo.slice(ini, fim).trim() + (fim < r.corpo.length ? '…' : '');
-      }
-    }
-    return r.descricao;
+  // Mostra o pedaço do texto onde apareceu uma das palavras que casaram.
+  function trecho(r: Registro, termos: string[]): string {
+    const palavras = r.corpo.split(' ');
+    const alvo = new Set(termos);
+    const i = palavras.findIndex((w) => alvo.has(fonetiza(w.replace(/[^p{L}p{N}]/gu, ''))));
+    if (i < 0) return r.descricao;
+    const ini = Math.max(0, i - 12);
+    const fim = Math.min(palavras.length, i + 20);
+    return (ini > 0 ? '…' : '') + palavras.slice(ini, fim).join(' ') + (fim < palavras.length ? '…' : '');
   }
 
-  function desenhar(ids: string[], consulta: string) {
+  function desenhar(achados: { id: string; terms: string[] }[]) {
     lista.replaceChildren();
-    for (const id of ids) {
+    for (const { id, terms } of achados) {
       const r = porId.get(id);
       if (!r) continue;
       const li = document.createElement('li');
@@ -129,7 +117,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       h3.textContent = r.titulo;
       const p = document.createElement('p');
       p.className = 'busca-trecho';
-      p.textContent = trecho(r, consulta);
+      p.textContent = trecho(r, terms);
       texto.append(tag, h3, p);
       const tempo = document.createElement('span');
       tempo.className = 'menu-time';
@@ -156,12 +144,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     if (input.value.trim() !== q) return; // a pessoa já digitou outra coisa
     // Todas as palavras; se nada vier, qualquer uma delas.
-    let achados = motor!.search(q, { combineWith: 'AND' });
-    if (achados.length === 0) achados = motor!.search(q, { combineWith: 'OR' });
-    desenhar(
-      achados.map((x) => String(x.id)),
-      q,
-    );
+    let achados = [] as ReturnType<MiniSearch<Registro>['search']>;
+    for (const modo of ['AND', 'OR'] as const) {
+      const consulta = montarConsulta(q, gatilhos, modo);
+      if (!consulta) break;
+      achados = semCauda(motor!.search(consulta));
+      if (achados.length) break;
+    }
+    desenhar(achados.map((x) => ({ id: String(x.id), terms: x.terms })));
     status.textContent =
       achados.length === 0
         ? 'Nada encontrado. Tente outra palavra ou uma parte dela.'
